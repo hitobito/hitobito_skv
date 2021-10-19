@@ -6,13 +6,12 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Group::SwissCanoeKantonalverbaendeVereineVorstand < ::Group
+class Group::SwissCanoeKantonalverbandVereine < ::Group
+  self.layer = true
 
-  class Praesident < Role
-    self.permissions = [:layer_and_below_full, :contact_data, :finance]
-  end
+  children Group::SwissCanoeKantonalverbandVereinVorstand
 
-  class Kassier < Role
+  class Leitung < Role
     self.permissions = []
   end
 
@@ -20,6 +19,11 @@ class Group::SwissCanoeKantonalverbaendeVereineVorstand < ::Group
     self.permissions = []
   end
 
-  roles Praesident, Kassier, Mitglied
+  ### ROLES
+  self.default_children = [
+    Group::SwissCanoeKantonalverbandVereinVorstand
+  ]
+
+  roles Leitung, Mitglied
 
 end
