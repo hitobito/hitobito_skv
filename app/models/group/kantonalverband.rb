@@ -6,24 +6,13 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Group::SwissCanoeKantonalverbandVereine < ::Group
+class Group::Kantonalverband < ::Group
   self.layer = true
 
-  children Group::SwissCanoeKantonalverbandVereinVorstand
-
-  class Leitung < Role
-    self.permissions = []
-  end
-
-  class Mitglied < Role
-    self.permissions = []
-  end
-
-  ### ROLES
   self.default_children = [
-    Group::SwissCanoeKantonalverbandVereinVorstand
+    Group::KantonalverbandVerein
   ]
 
-  roles Leitung, Mitglied
+  children Group::KantonalverbandVerein
 
 end
