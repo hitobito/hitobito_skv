@@ -11,12 +11,12 @@ class Group::SwissCanoe < ::Group
   self.layer = true
 
   children Group::Vorstand,
-           Group::Kantonalverbaende
+           Group::SwissCanoeKantonalverbaende
 
   ### ROLES
   self.default_children = [
     Group::Vorstand,
-    Group::Kantonalverbaende
+    Group::SwissCanoeKantonalverbaende
   ]
 
 end
