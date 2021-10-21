@@ -6,6 +6,6 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-module HitobitoSkv
-  VERSION = '0.0.1'
+class Role::Leitung < ::Role
+  self.permissions = [:layer_full]
 end

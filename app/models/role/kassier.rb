@@ -6,6 +6,6 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-module HitobitoSkv
-  VERSION = '0.0.1'
+class Role::Kassier < ::Role
+  self.permissions = [:layer_and_below_read]
 end

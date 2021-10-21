@@ -1,4 +1,4 @@
-#  Copyright (c) 2012-2021, Swiss Canoe. This file is part of
+#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
@@ -10,16 +10,37 @@ de:
 
       ### GROUPS
 
-      group/root:
-        one: Hauptgruppe
-        other: Hauptgruppen
+      group/swiss_canoe:
+        one: Schweizerischer Kanu-Verband
+        other: Schweizerischer Kanu-Verband
 
+      group/vorstand:
+        one: Vorstand
+        other: Vorstände
+
+      group/kantonalverband:
+        one: Kantonalverband
+        other: Kantonalverbände
+
+      group/verein:
+        one: Verein
+        other: Vereine
 
       ### ROLES
 
-      group/root/leader:
-        one: Leitung
-        description: Leitungspersonen verwalten die Applikation.
-      group/root/member:
+      group/vorstand/praesident:
+        one: Präsident*in
+        description:
+      group/vorstand/mitglied:
+        one: Mitglied
+        description: Mitglieder sind alle anderen.
+      group/vorstand/kassier:
+        one: Kassier*in
+        description:
+
+      group/verein/leitung:
+        one: Leiter*in
+        description:
+      group/verein/mitglied:
         one: Mitglied
         description: Mitglieder sind alle anderen.

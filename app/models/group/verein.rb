@@ -6,6 +6,21 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-module HitobitoSkv
-  VERSION = '0.0.1'
+class Group::Verein < ::Group
+  self.layer = true
+
+  class Leitung < ::Role::Leitung
+  end
+
+  class Mitglied < ::Role::Mitglied
+  end
+
+  roles Leitung, Mitglied
+
+
+  self.default_children = [
+  Group::Vorstand
+  ]
+
+  children Group::Vorstand
 end
