@@ -34,7 +34,7 @@ puzzlers = [
 ]
 
 devs = {
-  'Customer Name' => 'customer@email.com'
+  # 'Customer Name' => 'customer@email.com'
 }
 puzzlers.each do |puz|
   devs[puz] = "#{puz.split.last.downcase}@puzzle.ch"
@@ -46,5 +46,5 @@ seeder.seed_all_roles
 
 root = Group.root
 devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::Root::Leader)
+  seeder.seed_developer(name, email, root, Group::Verein::Leitung)
 end

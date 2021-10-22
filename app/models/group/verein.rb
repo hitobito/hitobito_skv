@@ -9,6 +9,12 @@
 class Group::Verein < ::Group
   self.layer = true
 
+  self.default_children = [
+    Group::Vorstand
+  ]
+
+  children Group::Vorstand
+
   class Leitung < ::Role::Leitung
   end
 
@@ -17,10 +23,4 @@ class Group::Verein < ::Group
 
   roles Leitung, Mitglied
 
-
-  self.default_children = [
-  Group::Vorstand
-  ]
-
-  children Group::Vorstand
 end

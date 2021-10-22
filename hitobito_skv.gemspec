@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = 'Skv organization specific features'
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['Rakefile']
-  s.test_files = Dir['test/**/*']
+  s.test_files = Dir['(test,spec)/**/*']
 
   s.add_dependency 'globalize-accessors'
 end

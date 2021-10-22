@@ -1,11 +1,6 @@
-# hitobito_skv
-A hitobito wagon defining the organization hierarchy and additional features for Swiss Canoe
-Basis Setup 
-
-# Hitobito Skv
-
-This hitobito wagon defines the organization hierarchy with groups and roles
-of Skv.
+# hitobito skv
+A hitobito wagon defining the organization hierarchy and additional features for Swiss Canoe.
+(Schweizerischer Kanu-Verband)
 
 
 ## Organization Hierarchy
