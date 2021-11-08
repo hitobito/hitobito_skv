@@ -6,4 +6,4 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-Group::Root.seed_once(:parent_id, name: 'Schweizerischer Kanu-Verband')
+Group::SwissCanoe.seed_once(:parent_id, name: 'Schweizerischer Kanu-Verband')
