@@ -9,9 +9,6 @@
 class Group::Kantonalverband < ::Group
   self.layer = true
 
-  self.default_children = [
-    Group::Verein
-  ]
-
-  children Group::Verein
+  children(Group::KantonalverbandVorstand,
+           Group::Sektion)
 end

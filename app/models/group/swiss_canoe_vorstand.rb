@@ -6,16 +6,19 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Group::Vorstand < ::Group
-  class Praesident < ::Role::Praesident
+class Group::SwissCanoeVorstand < ::Group
+  class Praesident < ::Role
+    self.permissions = [:group_full]
   end
 
-  class Kassier < ::Role::Kassier
+  class Finanzchef < ::Role
+    self.permissions = [:group_full, :finance]
   end
 
-  class Mitglied < ::Role::Mitglied
+  class Vorstandsmitglied < ::Role
+    self.permissions = [:group_read]
   end
 
-  roles Praesident, Kassier, Mitglied
+  roles Praesident, Finanzchef, Vorstandsmitglied
 
 end

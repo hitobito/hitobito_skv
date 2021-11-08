@@ -5,7 +5,20 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
+class Group::PaddleLevel < ::Group
 
-class Role::Praesident < ::Role
-  self.permissions = [:layer_and_below_full]
+  class Anbieter < ::Role
+    self.permissions = [:group_read]
+  end
+
+  class Assessor < ::Role
+    self.permissions = [:group_read]
+  end
+
+  class Koordinator < ::Role
+    self.permissions = [:group_read]
+  end
+
+  roles Anbieter, Assessor, Koordinator
+
 end

@@ -14,13 +14,61 @@ de:
         one: Schweizerischer Kanu-Verband
         other: Schweizerischer Kanu-Verband
 
-      group/vorstand:
+      group/swiss_canoe_vorstand:
         one: Vorstand
         other: Vorstände
+
+      group/mitglieder:
+        one: Mitglieder
+        other: Mitglieder
+
+      group/paddle_level:
+        one: Paddle Level
+        other: Paddle Level
+
+      group/geschaeftsleitung:
+        one: Geschäftsleitung
+        other: Geschäftsleitungen
+
+      group/mitarbeitende:
+        one: Mitarbeitende
+        other: Mitarbeitende
+
+      group/externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
+
+      group/fachkommission:
+        one: Fachkommission
+        other: Fachkommissionen
 
       group/kantonalverband:
         one: Kantonalverband
         other: Kantonalverbände
+
+      group/kantonalverband_vorstand:
+        one: Vorstand
+        other: Vorstände
+
+      group/sektion:
+        one: Sektion
+        other: Sektion
+
+      group/sektion_vorstand:
+        one: Vorstand
+        other: Vorstände
+
+      group/projektgruppe:
+        one: Projektgruppe
+        other: Projektgruppen
+
+      group/regionale_leistungszentren:
+        one: Regionale Leistungszentrum
+        other: Regionale Leistungszentren
+
+      group/nationalmannschaft:
+        one: Nationalmannschaft
+        other: Nationalmannschaften
 
       group/verein:
         one: Verein
@@ -28,15 +76,119 @@ de:
 
       ### ROLES
 
-      group/vorstand/praesident:
-        one: Präsident*in
-        description:
-      group/vorstand/mitglied:
+      group/mitglieder/mitglied:
         one: Mitglied
-        description: Mitglieder sind alle anderen.
-      group/vorstand/kassier:
+        description: Mitglied
+      group/mitglieder/ehrenmitglied:
+        one: Ehrenmitglied
+        description: Ehrenmitglied
+      group/mitglieder/nachwuchsmitglied:
+        one: Nachwuchsmitglied
+        description: Nachwuchsmitglied
+      group/paddle_level/anbieter:
+        one: Anbieter*in
+        description: Anbieter*in
+      group/paddle_level/assessor:
+        one: Assessor*in
+        description: Assessor*in
+      group/paddle_level/koordinator:
+        one: Koordinator*in
+        description: Koordinator*in
+
+      group/swiss_canoe_vorstand/praesident:
+        one: Präsident*in
+        description: Präsident*in
+      group/swiss_canoe_vorstand/finanzchef:
+        one: Finanzchef*in
+        description: Finanzchef*in
+      group/swiss_canoe_vorstand/vorstandsmitglied:
+        one: Vorstandsmitglied
+        description: Vorstandsmitglied
+
+      group/geschaeftsleitung/mitarbeitende:
+        one: Mitarbeitende*r
+        description: Mitarbeitende*r
+
+      group/mitarbeitende/trainer:
+        one: Trainer*in
+        description: Trainer*in
+      group/mitarbeitende/mitarbeitende:
+        one: Mitarbeitende*r
+        description: Mitarbeitende*r
+
+      group/externe_kontakte/externer_kontakt:
+        one: Externer Kontakt
+        description: Externer Kontakt
+      group/externe_kontakte/swiss_canoe_partner:
+        one: Swiss Canoe Partner
+        description: Swiss Canoe Partner
+
+      group/fachkommission/chef:
+        one: Chef*in
+        description: Chef*in
+      group/fachkommission/mitglied:
+        one: Mitglied
+        description: Mitglied
+
+      group/kantonalverband_vorstand/praesident:
+        one: Präsident*in
+        description: Präsident*in
+      group/kantonalverband_vorstand/vorstandsmitglied:
+        one: Vorstandsmitglied
+        description: Vorstandsmitglied
+      group/kantonalverband_vorstand/finanzchef:
+        one: Finanzchef*in
+        description: Finanzchef*in
+
+      group/sektion_vorstand/praesident:
+        one: Präsident*in
+        description: Präsident*in
+      group/sektion_vorstand/kassier:
         one: Kassier*in
-        description:
+        description: Kassier*in
+      group/sektion_vorstand/sekretaer:
+        one: Sekretär*in
+        description: Sekretär*in
+      group/sektion_vorstand/vorstandsmitglied:
+        one: Vorstandsmitglied
+        description: Vorstandsmitglied
+
+      group/sektion/js_coach:
+        one: J+S Coach
+        description: J+S Coach
+      group/sektion/junior:
+        one: Junior*in
+        description: Junior*in
+      group/sektion/aktivmitglied:
+        one: Aktivmitglied
+        description: Aktivmitglied
+      group/sektion/passivmitglied:
+        one: Passivmitglied
+        description: Passivmitglied
+      group/sektion/ehrenmitglied:
+        one: Ehrenmitglied
+        description: Ehrenmitglied
+
+      group/projektgruppe/mitglied:
+        one: Mitglied
+        description: Mitglied
+      group/projektgruppe/leitung:
+        one: Leitung
+        description: Leitung
+
+      group/regionale_leistungszentren/leitung:
+        one: Leitung
+        description: Leitung
+      group/regionale_leistungszentren/mitglied:
+        one: Mitglied
+        description: Mitglied
+
+      group/nationalmannschaft/trainer:
+        one: Trainer*in
+        description: Trainer*in
+      group/nationalmannschaft/kaderathlet:
+        one: Kaderathlet*in
+        description: Kaderathlet*in
 
       group/verein/leitung:
         one: Leiter*in

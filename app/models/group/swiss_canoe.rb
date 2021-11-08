@@ -8,12 +8,18 @@
 class Group::SwissCanoe < ::Group
   self.layer = true
 
-  self.default_children = [
-    Group::Vorstand,
-    Group::Kantonalverband
-  ]
-
-  children Group::Vorstand,
-           Group::Kantonalverband
+  children(
+    Group::SwissCanoeVorstand,
+    Group::Geschaeftsleitung,
+    Group::Mitarbeitende,
+    Group::ExterneKontakte,
+    Group::Sektion,
+    Group::Kantonalverband,
+    Group::Fachkommission,
+    Group::Mitglieder,
+    Group::PaddleLevel,
+    Group::Nationalmannschaft,
+    Group::RegionaleLeistungszentren
+  )
 
 end

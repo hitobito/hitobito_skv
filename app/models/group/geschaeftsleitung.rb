@@ -6,6 +6,11 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Role::Mitglied < ::Role
-  self.permissions = [:layer_read]
+class Group::Geschaeftsleitung < ::Group
+  class Mitarbeitende < ::Role
+    self.permissions = [:layer_and_below_full]
+  end
+
+  roles Mitarbeitende
+
 end

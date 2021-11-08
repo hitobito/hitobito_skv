@@ -5,7 +5,11 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
+class Group::ExterneKontakte < ::Group
 
-class Role::Leitung < ::Role
-  self.permissions = [:layer_full]
+  class ExternerKontakt < ::Role; end
+  class SwissCanoePartner < ::Role; end
+
+  roles ExternerKontakt, SwissCanoePartner
+
 end

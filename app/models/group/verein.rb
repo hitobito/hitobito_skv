@@ -6,21 +6,20 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Group::Verein < ::Group
-  self.layer = true
+# class Group::Verein < ::Group
+#   self.layer = true
 
-  self.default_children = [
-    Group::Vorstand
-  ]
+#   self.default_children = [
+#     Group::Vorstand
+#   ]
 
-  children Group::Vorstand
+#   children(Group::Vorstand)
 
-  class Leitung < ::Role::Leitung
-  end
+#   class Leitung < ::Role::Leitung
+#   end
 
-  class Mitglied < ::Role::Mitglied
-  end
+#   class Mitglied < ::Role::Mitglied
+#   end
 
-  roles Leitung, Mitglied
-
-end
+#   roles Leitung, Mitglied
+# end
