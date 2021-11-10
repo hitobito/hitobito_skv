@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Group::Mitglieder < ::Group
-
   class Mitglied < ::Role
     self.permissions = [:group_read]
   end
@@ -15,5 +14,4 @@ class Group::Mitglieder < ::Group
   class Nachwuchsmitglied < ::Role; end
 
   roles Mitglied, Ehrenmitglied, Nachwuchsmitglied
-
 end

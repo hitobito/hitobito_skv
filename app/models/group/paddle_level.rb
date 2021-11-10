@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Group::PaddleLevel < ::Group
-
   class Anbieter < ::Role
     self.permissions = [:group_read]
   end
@@ -20,5 +19,4 @@ class Group::PaddleLevel < ::Group
   end
 
   roles Anbieter, Assessor, Koordinator
-
 end

@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 #  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of

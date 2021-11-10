@@ -12,5 +12,4 @@ class Group::Geschaeftsleitung < ::Group
   end
 
   roles Mitarbeitende
-
 end

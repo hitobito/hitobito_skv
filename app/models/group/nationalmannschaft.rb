@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 class Group::Nationalmannschaft < ::Group
   class Trainer < ::Role
     self.permissions = [:group_full]

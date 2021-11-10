@@ -21,5 +21,4 @@ class Group::SwissCanoe < ::Group
     Group::Nationalmannschaft,
     Group::RegionaleLeistungszentren
   )
-
 end

@@ -16,5 +16,4 @@ class Group::Mitarbeitende < ::Group
   end
 
   roles Trainer, Mitarbeitende
-
 end

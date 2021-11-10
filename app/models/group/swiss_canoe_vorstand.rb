@@ -20,5 +20,4 @@ class Group::SwissCanoeVorstand < ::Group
   end
 
   roles Praesident, Finanzchef, Vorstandsmitglied
-
 end
