@@ -6,8 +6,12 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Group::ExterneKontakte < ::Group
-  class ExternerKontakt < ::Role; end
-  class SwissCanoePartner < ::Role; end
+  class ExternerKontakt < ::Role
+    self.kind = :external
+  end
+  class SwissCanoePartner < ::Role
+    self.kind = :external
+  end
 
   roles ExternerKontakt, SwissCanoePartner
 end
