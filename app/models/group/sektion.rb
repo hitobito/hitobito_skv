@@ -7,6 +7,13 @@
 
 
 class Group::Sektion < ::Group
+  self.default_children = [
+    Group::SektionVorstand
+  ]
+
+  children Group::Projektgruppe,
+           Group::SektionVorstand
+
   class JsCoach < ::Role
     self.permissions = [:group_full]
   end
@@ -26,6 +33,4 @@ class Group::Sektion < ::Group
   class Ehrenmitglied < ::Role; end
 
   roles JsCoach, Junior, Aktivmitglied, Passivmitglied, Ehrenmitglied
-
-  children(Group::Projektgruppe, Group::SektionVorstand)
 end
