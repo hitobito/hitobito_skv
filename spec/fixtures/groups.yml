@@ -1,0 +1,68 @@
+#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv.
+
+swiss_canoe:
+  name: Schweizerischer Kanu-Verband
+  type: Group::SwissCanoe
+  lft: 1
+  rgt: 30
+  email: alta.haley@example.org
+  address: Schellingstr. 8
+  zip_code: 5692
+  town: Damianburg
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
+swiss_canoe_vorstand:
+  parent: swiss_canoe
+  name: Vorstand
+  type: Group::SwissCanoeVorstand
+  lft: 2
+  rgt: 3
+  email: alta.haley@example.org
+  address: Schellingstr. 8
+  zip_code: 5692
+  town: Damianburg
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
+be:
+  parent: swiss_canoe
+  name: Bern
+  short_name: BE
+  type: Group::Kantonalverband
+  lft: 4
+  rgt: 7
+  email: bern@be.ch
+  address: Klostergasse 3
+  zip_code: 3333
+  town: Bern
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
+zh:
+  parent: swiss_canoe
+  name: Zürich
+  short_name: ZH
+  type: Group::Kantonalverband
+  lft: 24
+  rgt: 29
+  email: zuerich@zh.ch
+  address: Tellgasse 3
+  zip_code: 8888
+  town: Zürich
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>
+be_kanu_club:
+  parent: be
+  name: Kanu Club Bern
+  type: Group::Sektion
+  lft: 5
+  rgt: 6
+  email: verner@example.com
+  address: Glücksburger Str. 50a
+  zip_code: 6809
+  town: Wakanscheid
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
+zh_kanu_club:
+  parent: zh
+  name: Kanu Club Zürich
+  type: Group::Sektion
+  lft: 27
+  rgt: 28
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>

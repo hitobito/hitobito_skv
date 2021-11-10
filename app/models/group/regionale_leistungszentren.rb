@@ -6,6 +6,14 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Role::Kassier < ::Role
-  self.permissions = [:layer_and_below_read]
+class Group::RegionaleLeistungszentren < ::Group
+  class Leitung < ::Role
+    self.permissions = [:group_full]
+  end
+
+  class Mitglied < ::Role
+    self.permissions = [:group_read]
+  end
+
+  roles Leitung, Mitglied
 end

@@ -5,7 +5,10 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
+require 'spec_helper'
 
-class Role::Leitung < ::Role
-  self.permissions = [:layer_full]
+describe Group do
+
+  include_examples 'group types'
+
 end

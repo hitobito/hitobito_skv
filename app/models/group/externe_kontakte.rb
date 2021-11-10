@@ -5,22 +5,13 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
-class Group::Verein < ::Group
-  self.layer = true
-
-  self.default_children = [
-    Group::Vorstand
-  ]
-
-  children Group::Vorstand
-
-  class Leitung < ::Role::Leitung
+class Group::ExterneKontakte < ::Group
+  class ExternerKontakt < ::Role
+    self.kind = :external
+  end
+  class SwissCanoePartner < ::Role
+    self.kind = :external
   end
 
-  class Mitglied < ::Role::Mitglied
-  end
-
-  roles Leitung, Mitglied
-
+  roles ExternerKontakt, SwissCanoePartner
 end

@@ -22,6 +22,7 @@ end
 puzzlers = [
   'Andreas Maierhofer',
   'Carlo Beltrame',
+  'Luca Brügger',
   'Mathis Hofer',
   'Matthias Viehweger',
   'Nils Rauch',
@@ -29,8 +30,7 @@ puzzlers = [
   'Pascal Simon',
   'Pascal Zumkehr',
   'Roland Studer',
-  'Tobias Hinderling',
-  'Luca Brügger'
+  'Tobias Hinderling'
 ]
 
 devs = {
@@ -46,5 +46,5 @@ seeder.seed_all_roles
 
 root = Group.root
 devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::Verein::Leitung)
+  seeder.seed_developer(name, email, root, Group::Geschaeftsleitung::Mitarbeitende)
 end

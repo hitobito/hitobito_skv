@@ -6,6 +6,14 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 
-class Role::Praesident < ::Role
-  self.permissions = [:layer_and_below_full]
+class Group::Mitarbeitende < ::Group
+  class Trainer < ::Role
+    self.permissions = [:group_full]
+  end
+
+  class Mitarbeitende < ::Role
+    self.permissions = [:group_read]
+  end
+
+  roles Trainer, Mitarbeitende
 end

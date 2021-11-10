@@ -5,10 +5,18 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
+class Group::PaddleLevel < ::Group
+  class Anbieter < ::Role
+    self.permissions = [:group_read]
+  end
 
-class Group::Kantonalverband < ::Group
-  self.layer = true
+  class Assessor < ::Role
+    self.permissions = [:group_read]
+  end
 
-  children(Group::KantonalverbandVorstand,
-           Group::Sektion)
+  class Koordinator < ::Role
+    self.permissions = [:group_read]
+  end
+
+  roles Anbieter, Assessor, Koordinator
 end

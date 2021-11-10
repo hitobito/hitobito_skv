@@ -5,17 +5,14 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
-class Group::Vorstand < ::Group
-  class Praesident < ::Role::Praesident
+class Group::Nationalmannschaft < ::Group
+  class Trainer < ::Role
+    self.permissions = [:group_full]
   end
 
-  class Kassier < ::Role::Kassier
+  class Kaderathlet < ::Role
+    self.permissions = [:group_read]
   end
 
-  class Mitglied < ::Role::Mitglied
-  end
-
-  roles Praesident, Kassier, Mitglied
-
+  roles Trainer, Kaderathlet
 end

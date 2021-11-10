@@ -1,0 +1,26 @@
+#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv.
+
+praesident:
+  first_name: Mrs
+  last_name: President
+  email: president@hitobito.example.com
+  gender: w
+  contact_data_visible: true
+  primary_group: root
+finanzchef:
+  first_name: Mr
+  last_name: Finanzchef
+  email: finanzchef@hitobito.example.com
+  gender: m
+  contact_data_visible: true
+  primary_group: swiss_canoe_vorstand
+berner_kanufahrer:
+  first_name: Berner
+  last_name: Kanufan
+  email: kanubernmember@hitobito.example.com
+  gender: m
+  contact_data_visible: true
+  primary_group: be_kanu_club
