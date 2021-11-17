@@ -58,11 +58,11 @@ be_kanu_club:
   address: Glücksburger Str. 50a
   zip_code: 6809
   town: Wakanscheid
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_kanu_club) %>
 zh_kanu_club:
   parent: zh
   name: Kanu Club Zürich
   type: Group::Sektion
   lft: 27
   rgt: 28
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh_kanu_club) %>

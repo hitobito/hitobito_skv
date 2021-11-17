@@ -115,6 +115,9 @@ de:
       group/mitarbeitende/mitarbeitende:
         one: Mitarbeitende*r
         description: Mitarbeitende*r
+      group/mitarbeitende/back_office:
+        one: Back-Office
+        description: Back-Office
 
       group/externe_kontakte/externer_kontakt:
         one: Externer Kontakt

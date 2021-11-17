@@ -15,5 +15,9 @@ class Group::Mitarbeitende < ::Group
     self.permissions = [:group_read]
   end
 
-  roles Trainer, Mitarbeitende
+  class BackOffice < ::Role
+    self.permissions = [:layer_and_below_full, :admin]
+  end
+
+  roles Trainer, Mitarbeitende, BackOffice
 end

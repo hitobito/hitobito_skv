@@ -7,6 +7,7 @@
 
 
 class Group::Sektion < ::Group
+  self.layer = true
   self.default_children = [
     Group::SektionVorstand
   ]
