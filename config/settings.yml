@@ -11,6 +11,10 @@ application:
   languages:
     de: Deutsch
     fr: Français
+  logo:
+    image: swiss_canoe.png
+    width: 200
+    height: 138
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
