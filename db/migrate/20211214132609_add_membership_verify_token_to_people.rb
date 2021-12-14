@@ -5,13 +5,10 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-Rails.application.routes.draw do
+class AddMembershipVerifyTokenToPeople < ActiveRecord::Migration[6.1]
 
-  extend LanguageRouteScope
-
-  language_scope do
-    get '/people/:id/membership' => 'people/membership#show'
-    get '/verify_membership/:verify_token' => 'people/membership/verify#show'
+  def change
+    add_column :people, :verify_membership_token, :string
   end
 
 end
