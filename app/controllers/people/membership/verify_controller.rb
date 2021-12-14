@@ -5,13 +5,18 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-Rails.application.routes.draw do
+class People::Membership::VerifyController < ApplicationController
 
-  extend LanguageRouteScope
+  skip_authorization_check
 
-  language_scope do
-    get '/people/:id/membership' => 'people/membership#show'
-    get '/verify_membership/:verify_token' => 'people/membership/verify#show'
+  def show
+    render layout: false
+  end
+
+  private
+
+  def person
+    @person ||= Person.find_by(membership_verify_token: params[:verify_token])
   end
 
 end
