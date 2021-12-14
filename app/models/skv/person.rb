@@ -5,10 +5,15 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class AddMembershipVerifyTokenToPeople < ActiveRecord::Migration[6.1]
+module Skv::Person
+  extend ActiveSupport::Concern
 
-  def change
-    add_column :people, :verify_membership_token, :string
+  included do
+    validates :verify_membership_token, uniqueness: { allow_blank: true }
   end
 
+  def init_verify_membership_token!
+    token = SecureRandom.base58(24)
+    update!(verify_membership_token: token)
+  end
 end

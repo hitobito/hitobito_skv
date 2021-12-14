@@ -5,7 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class People::Membership::VerifyController < ApplicationController
+class People::Membership::VerifyController < ActionController::Base
+
+  helper_method :person
 
   skip_authorization_check
 
@@ -16,7 +18,14 @@ class People::Membership::VerifyController < ApplicationController
   private
 
   def person
-    @person ||= Person.find_by(membership_verify_token: params[:verify_token])
+    @person ||= fetch_person
+  end
+
+  def fetch_person
+    token = params[:verify_token]
+    return nil if token.blank?
+
+    Person.find_by(verify_membership_token: params[:verify_token])
   end
 
 end

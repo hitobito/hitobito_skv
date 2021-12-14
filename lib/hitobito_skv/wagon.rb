@@ -23,6 +23,7 @@ module HitobitoSkv
     config.to_prepare do
       # extend application classes here
       Group.include Skv::Group
+      Person.include Skv::Person
     end
 
     initializer 'skv.add_settings' do |_app|
