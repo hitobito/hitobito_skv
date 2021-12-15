@@ -7,7 +7,7 @@
 
 class People::Membership::VerifyController < ActionController::Base
 
-  helper_method :person
+  helper_method :person, :root
 
   skip_authorization_check
 
@@ -26,6 +26,10 @@ class People::Membership::VerifyController < ActionController::Base
     return nil if token.blank?
 
     Person.find_by(verify_membership_token: params[:verify_token])
+  end
+
+  def root
+    Group.root.decorate
   end
 
 end

@@ -11,11 +11,13 @@
     %title= "#{Settings.application.name} - #{title}"
   %body
     %header.logo
-      = image_tag(header_logo)
+      = header_logo
+      %p
+        = root.address_name
+      = root.complete_address
 
     %main
     - if person
-      Logo, Adresse
       %p -----
       %p= person.full_name
       %p= f(person.birthday)
