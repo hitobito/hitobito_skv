@@ -5,9 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class People::Membership::VerifyController < ActionController::Base
+class People::Membership::VerifyController < ActionController::Base # rubocop:disable Rails/ApplicationController
 
-  helper_method :person, :root
+  helper_method :person, :root, :member?
 
   skip_authorization_check
 
@@ -30,6 +30,10 @@ class People::Membership::VerifyController < ActionController::Base
 
   def root
     Group.root.decorate
+  end
+
+  def member?
+    @member ||= People::MembershipVerificator.new(person).member?
   end
 
 end
