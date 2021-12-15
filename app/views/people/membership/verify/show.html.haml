@@ -9,6 +9,7 @@
   %head
     %meta{charset: 'utf-8'}
     %title= "#{Settings.application.name} - #{title}"
+    %link{rel: 'stylesheet', type: 'text/css', href: 'membership_verify.css'}
   %body
     %header.logo
       = header_logo
@@ -22,6 +23,11 @@
       %p= person.full_name
       %p= f(person.birthday)
       = image_tag(person.picture_url, size: '72x72')
+
+      - if member?
+        valid
+      -else
+        not valid
 
     -else
       = t('verify_membership.not_found')

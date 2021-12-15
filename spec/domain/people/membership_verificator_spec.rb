@@ -28,7 +28,7 @@ describe People::MembershipVerificator do
     it 'returns false if person has no role' do
       person.roles.destroy_all
 
-      expect(verificator.member?).to eq(true)
+      expect(verificator.member?).to eq(false)
     end
 
     it 'returns false if person has only external role' do
