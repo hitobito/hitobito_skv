@@ -9,27 +9,33 @@
   %head
     %meta{charset: 'utf-8'}
     %title= "#{Settings.application.name} - #{title}"
-    %link{rel: 'stylesheet', type: 'text/css', href: 'membership_verify.css'}
-  %body
-    %header.logo
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    = stylesheet_pack_tag 'application'
+  %body.membership-verify
+    %header
       = header_logo
-      %p
+      .root-address
         = root.address_name
-      = root.complete_address
+        = root.complete_address
+    #page
+      #content
+        - if person
+          .member-img
+            = image_tag(person.picture_url)
+          .member-name
+            = person.full_name
+          - if member?
+            %div{:class => 'alert alert-success'}
+              %span.icon.icon-ok
+              = t('verify_membership.status_valid')
+          - else
+            %div{:class => 'alert alert-error'}
+              %span.icon.icon-remove-circle
+              = t('verify_membership.status_invalid')
 
-    %main
-    - if person
-      %p -----
-      %p= person.full_name
-      %p= f(person.birthday)
-      = image_tag(person.picture_url, size: '72x72')
+        -else
+          %div{:class => 'alert alert-alert'}
+            %span.icon.icon-remove-circle
+            = t('verify_membership.not_found')
 
-      - if member?
-        valid
-      -else
-        not valid
-
-    -else
-      = t('verify_membership.not_found')
-
-  = render 'layouts/footer'
+    = render 'layouts/footer'

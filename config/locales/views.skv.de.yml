@@ -7,3 +7,5 @@ de:
   verify_membership:
     title: Verifizierung SKV Mitgliedschaft
     not_found: Ungültiger Verifikationscode
+    status_valid: Mitgliedschaft gültig
+    status_invalid: Keine gültige Mitgliedschaft
