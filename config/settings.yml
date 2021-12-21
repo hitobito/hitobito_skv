@@ -25,3 +25,6 @@ root_email: hitobito-skv@puzzle.ch
 
 messages:
   enable_writing: true
+
+assignments:
+  enabled: true
