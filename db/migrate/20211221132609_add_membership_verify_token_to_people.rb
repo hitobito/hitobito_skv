@@ -5,10 +5,10 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class AddVerifyMembershipTokenToPeople < ActiveRecord::Migration[6.1]
+class AddMembershipVerifyTokenToPeople < ActiveRecord::Migration[6.1]
 
   def change
-    add_column :people, :verify_membership_token, :string, index: true
+    add_column :people, :membership_verify_token, :string, index: true
   end
 
 end

@@ -9,11 +9,11 @@ module Skv::Person
   extend ActiveSupport::Concern
 
   included do
-    validates :verify_membership_token, uniqueness: { allow_blank: true }
+    validates :membership_verify_token, uniqueness: { allow_blank: true }
   end
 
-  def init_verify_membership_token!
+  def init_membership_verify_token!
     token = SecureRandom.base58(24)
-    update!(verify_membership_token: token)
+    update!(membership_verify_token: token)
   end
 end
