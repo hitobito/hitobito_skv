@@ -8,9 +8,11 @@
 class People::MembershipController < ApplicationController
 
   def show
+    authorize!(:update, person)
+
     respond_to do |format|
       format.pdf do
-        render_pdf
+        send_data pdf, type: :pdf, disposition: 'inline', filename: pdf_filename
       end
     end
   end
@@ -21,8 +23,12 @@ class People::MembershipController < ApplicationController
     @person ||= Person.find(params[:id])
   end
 
-  def render_pdf
+  def pdf
     Export::Pdf::Passes::Membership.new(person).render
+  end
+
+  def pdf_filename
+    "skv-membership-#{person.id}.pdf"
   end
 
 

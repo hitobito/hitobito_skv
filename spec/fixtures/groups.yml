@@ -36,6 +36,17 @@ be:
   zip_code: 3333
   town: Bern
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
+be_vorstand:
+  parent: be
+  name: Vorstand Bern
+  type: Group::KantonalverbandVorstand
+  lft: 5
+  rgt: 6
+  email: vorsteher@example.com
+  address: Glücksrad Str. 42a
+  zip_code: 6809
+  town: Nirgendwo
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
 zh:
   parent: swiss_canoe
   name: Zürich

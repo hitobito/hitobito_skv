@@ -7,5 +7,8 @@
 
 class Export::Pdf::Passes::Membership
   class Title < Export::Pdf::Section
+    def render(person)
+      pdf.move_down 4.mm
+    end
   end
 end

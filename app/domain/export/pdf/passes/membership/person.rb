@@ -7,5 +7,7 @@
 
 class Export::Pdf::Passes::Membership
   class Person < Export::Pdf::Section
+    def render(person)
+    end
   end
 end

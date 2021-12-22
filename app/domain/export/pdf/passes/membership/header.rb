@@ -8,5 +8,8 @@
 class Export::Pdf::Passes::Membership
   class Header < Export::Pdf::Section
     # use passes generic header
+    #
+    def render(person)
+    end
   end
 end

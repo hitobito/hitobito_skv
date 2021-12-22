@@ -21,7 +21,6 @@ module HitobitoSkv
     ]
 
     config.to_prepare do
-      PersonAbility.include Skv::PersonAbility
       Group.include Skv::Group
       Person.include Skv::Person
     end
