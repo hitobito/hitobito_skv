@@ -8,7 +8,22 @@
 class People::MembershipController < ApplicationController
 
   def show
-    # TODO: create membership pdf
+    respond_to do |format|
+      format.pdf do
+        render_pdf
+      end
+    end
   end
+
+  private
+
+  def person
+    @person ||= Person.find(params[:id])
+  end
+
+  def render_pdf
+    Export::Pdf::Passes::Membership.new(person).render
+  end
+
 
 end
