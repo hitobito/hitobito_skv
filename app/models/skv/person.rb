@@ -12,8 +12,14 @@ module Skv::Person
     validates :membership_verify_token, uniqueness: { allow_blank: true }
   end
 
+  def membership_verify_token
+    token = read_attribute(:membership_verify_token)
+    token.presence || init_membership_verify_token!
+  end
+
   def init_membership_verify_token!
     token = SecureRandom.base58(24)
     update!(membership_verify_token: token)
+    token
   end
 end

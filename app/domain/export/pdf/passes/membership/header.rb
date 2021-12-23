@@ -7,9 +7,22 @@
 
 class Export::Pdf::Passes::Membership
   class Header < Export::Pdf::Section
-    # use passes generic header
-    #
-    def render(person)
+
+    def render
+      pdf.move_down(20)
+      text(I18n.t('passes.membership.title'), size: 36, style: :bold, align: :center)
+      pdf.move_down(10)
+      render_skv_info
     end
+
+    private
+
+    def render_skv_info
+      info = ['CH-8000 Zürich',
+              'Phone +41 43 222 40 77',
+              'info@swisscanoe.ch - www.swisscanoe.ch'].join("\n")
+      text(info, align: :center)
+    end
+
   end
 end

@@ -8,7 +8,7 @@
 class Export::Pdf::Passes::Membership
   class Footer < Export::Pdf::Section
     # add sponsoring image
-    def render(person)
+    def render
     end
   end
 end

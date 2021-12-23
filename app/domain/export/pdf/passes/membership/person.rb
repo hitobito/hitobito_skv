@@ -6,8 +6,25 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Export::Pdf::Passes::Membership
+
   class Person < Export::Pdf::Section
-    def render(person)
+
+    alias_method :person, :model
+
+    def render
+      render_verify_qr_code
+    end
+
+    private
+
+    def render_verify_qr_code
+      qr_code = RQRCode::QRCode.new(verify_url).as_png.to_s
+      image(StringIO.new(qr_code))
+    end
+
+    def verify_url
+      host = ENV.fetch('RAILS_HOST_NAME', 'localhost:3000')
+      "https://#{host}/verify_membership/#{person.membership_verify_token}"
     end
   end
 end
