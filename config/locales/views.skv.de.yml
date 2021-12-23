@@ -9,3 +9,6 @@ de:
     not_found: Ungültiger Verifikationscode
     status_valid: Mitgliedschaft gültig
     status_invalid: Keine gültige Mitgliedschaft
+  passes:
+    membership:
+      title: Mitgliederausweis
