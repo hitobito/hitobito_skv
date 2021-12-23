@@ -5,6 +5,11 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
+require_relative 'membership/header'
+require_relative 'membership/title'
+require_relative 'membership/person'
+require_relative 'membership/footer'
+
 module Export::Pdf::Passes
   class Membership
 
