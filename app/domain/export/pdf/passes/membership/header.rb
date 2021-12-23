@@ -12,6 +12,8 @@ class Export::Pdf::Passes::Membership
       pdf.move_down(20)
       text(I18n.t('passes.membership.title'), size: 36, style: :bold, align: :center)
       pdf.move_down(10)
+      text(Date.today.year.to_s, size: 30, style: :bold, align: :center)
+      pdf.move_down(10)
       render_skv_info
     end
 

@@ -12,14 +12,15 @@ class Export::Pdf::Passes::Membership
     alias_method :person, :model
 
     def render
-      render_verify_qr_code
+      pdf.move_down(10)
+      table([ ['', { image: verify_qr_code }] ])
     end
 
     private
 
-    def render_verify_qr_code
-      qr_code = RQRCode::QRCode.new(verify_url).as_png.to_s
-      image(StringIO.new(qr_code))
+    def verify_qr_code
+      qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 200).to_s
+      StringIO.new(qr_code)
     end
 
     def verify_url
