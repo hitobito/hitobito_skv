@@ -9,14 +9,26 @@ class Export::Pdf::Passes::Membership
 
   class Person < Export::Pdf::Section
 
-    alias_method :person, :model
+    alias person model
 
     def render
       pdf.move_down(10)
-      table([ ['', { image: verify_qr_code }] ])
+      table([
+        [member_data_column, { image: verify_qr_code }]
+      ], cell_style: { border_width: 0 })
     end
 
     private
+
+    def member_data_column
+      attrs = [[t('member'), 'tbd'], [t('group'), group_name]]
+      [[attrs],
+       [person_address]]
+    end
+
+    def person_address
+      person.address_for_letter
+    end
 
     def verify_qr_code
       qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 200).to_s
@@ -25,7 +37,21 @@ class Export::Pdf::Passes::Membership
 
     def verify_url
       host = ENV.fetch('RAILS_HOST_NAME', 'localhost:3000')
-      "https://#{host}/verify_membership/#{person.membership_verify_token}"
+      "https://#{host}/verify_membership/#{membership_verify_token}"
     end
+
+    def membership_verify_token
+      person.membership_verify_token.presence || person.init_membership_verify_token!
+    end
+
+    def group_name
+      group = person.primary_group.presence || person.groups.first
+      group.name
+    end
+
+    def t(key)
+      I18n.t("passes.membership.#{key}")
+    end
+
   end
 end

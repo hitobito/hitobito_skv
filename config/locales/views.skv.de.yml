@@ -12,3 +12,5 @@ de:
   passes:
     membership:
       title: Mitgliederausweis
+      member: Mitglied
+      group: Sektion
