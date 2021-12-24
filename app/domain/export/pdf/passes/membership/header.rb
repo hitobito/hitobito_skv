@@ -10,7 +10,7 @@ class Export::Pdf::Passes::Membership
 
     def render
       pdf.move_down(20)
-      text(I18n.t('passes.membership.title'), size: 36, style: :bold, align: :center)
+      text(I18n.t('passes.membership.title'), size: 30, style: :bold, align: :center)
       pdf.move_down(10)
       text(Date.today.year.to_s, size: 30, style: :bold, align: :center)
       pdf.move_down(10)
@@ -22,7 +22,7 @@ class Export::Pdf::Passes::Membership
     def render_skv_info
       info = ['CH-8000 Zürich',
               'Phone +41 43 222 40 77',
-              'info@swisscanoe.ch - www.swisscanoe.ch'].join("\n")
+              'info@swisscanoe.ch - www.swisscanoe.ch'].join(' - ')
       text(info, align: :center)
     end
 

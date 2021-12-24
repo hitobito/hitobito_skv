@@ -23,6 +23,7 @@ module HitobitoSkv
     config.to_prepare do
       Group.include Skv::Group
       Person.include Skv::Person
+      Dropdown::PeopleExport.prepend Skv::Dropdown::PeopleExport
     end
 
     initializer 'skv.add_settings' do |_app|

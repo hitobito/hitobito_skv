@@ -7,8 +7,20 @@
 
 class Export::Pdf::Passes::Membership
   class Footer < Export::Pdf::Section
-    # add sponsoring image
+
     def render
+      image(sponsors_image_path)
     end
+
+    private
+
+    def sponsors_image_path
+      image_path('sponsors_membership_pass.png')
+    end
+
+    def image_path(name)
+      File.join(File.dirname(__FILE__), '../../../../../assets/images/', name)
+    end
+
   end
 end

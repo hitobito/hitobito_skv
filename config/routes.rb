@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   extend LanguageRouteScope
 
   language_scope do
-    get '/people/:id/membership' => 'people/membership#show'
+    get '/people/:id/membership' => 'people/membership#show', as: 'membership'
     get '/verify_membership/:verify_token' => 'people/membership/verify#show'
   end
 
