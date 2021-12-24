@@ -12,18 +12,31 @@ class Export::Pdf::Passes::Membership
     alias person model
 
     def render
-      pdf.move_down(10)
-      table([
-        [member_data_column, { image: verify_qr_code }]
-      ], cell_style: { border_width: 0 })
+      pdf.move_down(20)
+      table_data = [[row_membership], [row_address_qr]]
+      table(table_data, cell_style: { border_width: 0 })
     end
 
     private
 
-    def member_data_column
-      attrs = [[t('member'), 'tbd'], [t('group'), group_name]]
-      [[attrs],
-       [person_address]]
+    def row_address_qr
+      data = [[person_address, { image: verify_qr_code }]]
+      pdf.make_table(data) do
+        cells.borders = []
+        cells.size = 24
+        cells.font_style = :bold
+        cells.valign = :center
+        columns(1).width = 280
+      end
+    end
+
+    def row_membership
+      attrs = [[t('member'), 'tbd', t('group'), group_name]]
+      pdf.make_table(attrs) do
+        cells.borders = []
+        cells.size = 16
+        columns([1, 3]).font_style = :bold
+      end
     end
 
     def person_address
@@ -31,7 +44,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def verify_qr_code
-      qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 200).to_s
+      qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 250).to_s
       StringIO.new(qr_code)
     end
 
