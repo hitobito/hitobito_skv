@@ -13,7 +13,7 @@ class People::MembershipController < ApplicationController
 
     respond_to do |format|
       format.pdf do
-        send_data pdf, type: :pdf, disposition: 'inline', filename: pdf_filename
+        send_data pdf.render, type: :pdf, disposition: 'inline', filename: pdf.filename
       end
     end
   end
@@ -33,11 +33,7 @@ class People::MembershipController < ApplicationController
   end
 
   def pdf
-    Export::Pdf::Passes::Membership.new(person).render
-  end
-
-  def pdf_filename
-    "skv-membership-#{person.id}.pdf"
+    @pdf ||= Export::Pdf::Passes::Membership.new(person)
   end
 
 end

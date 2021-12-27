@@ -34,6 +34,13 @@ module Export::Pdf::Passes
       @pdf ||= Prawn::Document.new(render_options)
     end
 
+    def filename
+      parts = [t(:file_name_prefix)]
+      parts << Time.zone.now.year
+      parts << @person.full_name.parameterize(separator: '_')
+      [parts.join('-'), :pdf].join('.')
+    end
+
     private
 
     def render_options
@@ -51,6 +58,10 @@ module Export::Pdf::Passes
 
     def logo_section
       Export::Pdf::Passes::Sections::Logo.new(pdf, @person, {})
+    end
+
+    def t(key)
+      I18n.t("passes.membership.#{key}")
     end
 
   end

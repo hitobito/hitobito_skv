@@ -16,5 +16,6 @@ de:
       group: Sektion
       valid_until: Gültig bis
       licence_info: Gilt als Wettkampflizenz.
+      file_name_prefix: SKV-Mitgliederausweis
   dropdown/people_export:
     membership: Mitgliederausweis
