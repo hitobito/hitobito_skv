@@ -9,6 +9,7 @@ class People::MembershipController < ApplicationController
 
   def show
     authorize!(:update, person)
+    verify_membership!
 
     respond_to do |format|
       format.pdf do
@@ -18,6 +19,14 @@ class People::MembershipController < ApplicationController
   end
 
   private
+
+  def verify_membership!
+    raise 'Person is not member' unless member?
+  end
+
+  def member?
+    People::MembershipVerificator.new(person).member?
+  end
 
   def person
     @person ||= Person.find(params[:id])

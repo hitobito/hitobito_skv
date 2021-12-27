@@ -14,7 +14,6 @@ describe People::MembershipController do
     Fabricate('Group::KantonalverbandVorstand::Vorstandsmitglied',
               group: groups(:be_vorstand)).person
   end
-
   context 'GET show' do
     it 'is possible to download own membership pass' do
       sign_in(member)
@@ -39,6 +38,27 @@ describe People::MembershipController do
         get :show, params: { id: vorstand.id, format: 'pdf' }
       end.to raise_error(CanCan::AccessDenied)
     end
+
+    context 'non member' do
+      let(:mitarbeiter) do
+        gl = Fabricate('Group::Geschaeftsleitung', name: 'GL', parent: Group.root)
+        Fabricate('Group::Geschaeftsleitung::Mitarbeitende', group: gl).person
+      end
+
+      let(:non_member) do
+        ext = Fabricate('Group::ExterneKontakte', name: 'Extern', parent: Group.root)
+        Fabricate('Group::ExterneKontakte::ExternerKontakt', group: ext).person
+      end
+
+      it 'is not possible to download membership pass' do
+        sign_in(mitarbeiter)
+
+        expect do
+          get :show, params: { id: non_member.id, format: 'pdf' }
+        end.to raise_error('Person is not member')
+      end
+    end
+
   end
 
 end
