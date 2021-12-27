@@ -10,9 +10,12 @@ require 'spec_helper'
 describe People::MembershipController do
 
   let(:member) { people(:berner_kanufahrer) }
+  let(:be_vorstand) do
+    Fabricate('Group::KantonalverbandVorstand', parent: groups(:be))
+  end
   let(:vorstand) do
     Fabricate('Group::KantonalverbandVorstand::Vorstandsmitglied',
-              group: groups(:be_vorstand)).person
+              group: be_vorstand).person
   end
   context 'GET show' do
     it 'is possible to download own membership pass' do
