@@ -9,10 +9,16 @@ class Export::Pdf::Passes::Membership
   class Footer < Export::Pdf::Section
 
     def render
-      image(sponsors_image_path)
+      pdf.move_down(10)
+      text(licence_info, size: 16, align: :center)
+      image(sponsors_image_path, align: :center)
     end
 
     private
+
+    def licence_info
+      "#{t(:licence_info)} / Is regarded as competition licence."
+    end
 
     def sponsors_image_path
       image_path('sponsors_membership_pass.png')
@@ -20,6 +26,10 @@ class Export::Pdf::Passes::Membership
 
     def image_path(name)
       File.join(File.dirname(__FILE__), '../../../../../assets/images/', name)
+    end
+
+    def t(key)
+      I18n.t("passes.membership.#{key}")
     end
 
   end

@@ -10,14 +10,16 @@ class Export::Pdf::Passes::Membership
 
     def render
       pdf.move_down(20)
-      text(I18n.t('passes.membership.title'), size: 30, style: :bold, align: :center)
-      pdf.move_down(10)
-      text(Date.today.year.to_s, size: 30, style: :bold, align: :center)
+      text(title, size: 30, style: :bold, align: :center)
       pdf.move_down(10)
       render_skv_info
     end
 
     private
+
+    def title
+      "#{I18n.t('passes.membership.title')} #{Time.zone.today.year}"
+    end
 
     def render_skv_info
       info = ['CH-8000 Zürich',

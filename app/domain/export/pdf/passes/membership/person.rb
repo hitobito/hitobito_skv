@@ -15,6 +15,7 @@ class Export::Pdf::Passes::Membership
       pdf.move_down(20)
       table_data = [[row_membership], [row_address_qr]]
       table(table_data, cell_style: { border_width: 0 })
+      text(valid_until, size: 16)
     end
 
     private
@@ -39,6 +40,10 @@ class Export::Pdf::Passes::Membership
       end
     end
 
+    def valid_until
+      "#{t(:valid_until)}: #{I18n.l(Time.zone.today.end_of_year)}"
+    end
+
     def person_address
       person.address_for_letter
     end
@@ -59,7 +64,7 @@ class Export::Pdf::Passes::Membership
 
     def group_name
       group = person.primary_group.presence || person.groups.first
-      group.name
+      group.short_name.presence || group.name
     end
 
     def t(key)

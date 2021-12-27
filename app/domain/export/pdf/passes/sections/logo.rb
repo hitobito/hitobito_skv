@@ -16,7 +16,7 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
 
   def logo(width: pdf.bounds.width, height: LOGO_BOX_HEIGHT)
     bounding_box([0, cursor], width: width, height: height) do
-      image(logo_path, { position: :left, at: [-60, height + 20] })
+      image(logo_path, { position: :left, at: [-40, height + 20] })
       skv_label
     end
   end
@@ -26,7 +26,7 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
              "Fédération Suisse de Canoë-Kayak\n" \
              "Swiss Canoe Federation",
              align: :center,
-             at: [0, 90],
+             at: [120, 90],
              size: 14.pt )
   end
 
