@@ -11,10 +11,10 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
   LOGO = 'swiss_canoe_passes.png'.freeze
 
   def render
-    stamped :logo
+    render_logo
   end
 
-  def logo(width: pdf.bounds.width, height: LOGO_BOX_HEIGHT)
+  def render_logo(width: pdf.bounds.width, height: LOGO_BOX_HEIGHT)
     bounding_box([0, cursor], width: width, height: height) do
       image(logo_path, { position: :left, at: [-40, height + 20] })
       skv_label
@@ -27,7 +27,7 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
              "Swiss Canoe Federation",
              align: :center,
              at: [120, 90],
-             size: 14.pt )
+             size: 14.pt)
   end
 
   def logo_path
