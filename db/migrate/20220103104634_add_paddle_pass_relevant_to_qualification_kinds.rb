@@ -5,8 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class AddAppearsOnPaddlePassToQualificationKinds < ActiveRecord::Migration[6.1]
+class AddPaddlePassRelevantToQualificationKinds < ActiveRecord::Migration[6.1]
   def change
-    add_column :qualification_kinds, :appears_on_paddle_pass, :boolean, default: false, null: false
+    add_column :qualification_kinds, :paddle_pass_relevant, :boolean, default: false, null: false
   end
 end

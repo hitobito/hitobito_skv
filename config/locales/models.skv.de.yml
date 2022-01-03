@@ -201,5 +201,5 @@ de:
 
     attributes:
       qualification_kind:
-        appears_on_paddle_pass: Erscheint im Paddle Pass
+        paddle_pass_relevant: Erscheint im Paddle Pass
 

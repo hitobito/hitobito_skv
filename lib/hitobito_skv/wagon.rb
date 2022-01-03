@@ -30,7 +30,7 @@ module HitobitoSkv
       Dropdown::PeopleExport.prepend Skv::Dropdown::PeopleExport
 
       # CONTROLLERS
-      QualificationKindsController.permitted_attrs += [:appears_on_paddle_pass]
+      QualificationKindsController.permitted_attrs += [:paddle_pass_relevant]
     end
 
     initializer 'skv.add_settings' do |_app|
