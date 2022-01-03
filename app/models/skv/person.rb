@@ -15,5 +15,6 @@ module Skv::Person
   def init_membership_verify_token!
     token = SecureRandom.base58(24)
     update!(membership_verify_token: token)
+    token
   end
 end

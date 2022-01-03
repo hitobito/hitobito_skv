@@ -9,3 +9,13 @@ de:
     not_found: Ungültiger Verifikationscode
     status_valid: Mitgliedschaft gültig
     status_invalid: Keine gültige Mitgliedschaft
+  passes:
+    membership:
+      title: Mitgliederausweis
+      member: Mitglied
+      group: Sektion
+      valid_until: Gültig bis
+      licence_info: Gilt als Wettkampflizenz.
+      file_name_prefix: SKV-Mitgliederausweis
+  dropdown/people_export:
+    membership: Mitgliederausweis

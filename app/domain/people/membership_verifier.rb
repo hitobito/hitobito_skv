@@ -5,7 +5,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class People::MembershipVerificator
+class People::MembershipVerifier
 
   def initialize(person)
     @person = person
