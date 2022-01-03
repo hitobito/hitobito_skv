@@ -23,7 +23,7 @@ module Skv
       end
 
       def member?(person)
-        People::MembershipVerificator.new(person).member?
+        People::MembershipVerifier.new(person).member?
       end
 
     end

@@ -20,7 +20,7 @@ describe Export::Pdf::Passes::Membership do
   end
 
   it 'sanitizes filename' do
-    expect(subject.filename).to eq 'SKV-Mitgliederausweis-2021-berner_kanufan.pdf'
+    expect(subject.filename).to eq "SKV-Mitgliederausweis-#{year}-berner_kanufan.pdf"
   end
 
   context 'text' do
@@ -40,7 +40,7 @@ describe Export::Pdf::Passes::Membership do
         [41, 408, 'Wasserstrasse 42'],
         [41, 379, '4242 Kanuto'],
         [36, 276, "Gültig bis: 31.12.#{year}"],
-        [80, 247, 'Gilt als Wettkampflizenz. / Is regarded as competition licence.']
+        [36, 247, 'Gilt als Wettkampflizenz. / Is regarded as competition licence.']
       ]
     end
   end

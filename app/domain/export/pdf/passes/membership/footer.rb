@@ -10,7 +10,7 @@ class Export::Pdf::Passes::Membership
 
     def render
       pdf.move_down(10)
-      text(licence_info, size: 16, align: :center)
+      text(licence_info, size: 16)
       image(sponsors_image_path, align: :center)
     end
 
@@ -25,7 +25,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def image_path(name)
-      File.join(File.dirname(__FILE__), '../../../../../assets/images/', name)
+      Wagons.find_wagon(__FILE__).root.join('app', 'assets', 'images', name)
     end
 
     def t(key)

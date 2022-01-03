@@ -21,11 +21,11 @@ class People::MembershipController < ApplicationController
   private
 
   def verify_membership!
-    raise 'Person is not member' unless member?
+    not_found unless member?
   end
 
   def member?
-    People::MembershipVerificator.new(person).member?
+    People::MembershipVerifier.new(person).member?
   end
 
   def person

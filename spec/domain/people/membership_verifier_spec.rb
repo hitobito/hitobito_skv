@@ -7,9 +7,9 @@
 
 require 'spec_helper'
 
-describe People::MembershipVerificator do
+describe People::MembershipVerifier do
 
-  let(:verificator) { People::MembershipVerificator.new(person) }
+  let(:verificator) { described_class.new(person) }
   let(:person) { people(:berner_kanufahrer) }
   let!(:external_group) { Group::ExterneKontakte.create!(parent: Group.root, name: 'Extis') }
 

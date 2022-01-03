@@ -58,7 +58,7 @@ describe People::MembershipController do
 
         expect do
           get :show, params: { id: non_member.id, format: 'pdf' }
-        end.to raise_error('Person is not member')
+        end.to raise_error(ActionController::RoutingError, 'Not Found')
       end
     end
 

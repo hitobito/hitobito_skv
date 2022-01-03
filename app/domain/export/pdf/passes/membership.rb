@@ -12,18 +12,11 @@ require_relative 'membership/footer'
 module Export::Pdf::Passes
   class Membership
 
-    class << self
-      def export(_format, person)
-        new(person).render
-      end
-    end
-
     def initialize(person)
       @person = person
     end
 
     def render
-      logo_section.render
       sections.each do |section|
         section.render
       end
@@ -51,13 +44,10 @@ module Export::Pdf::Passes
     end
 
     def sections
-      @sections ||= [Header, Person, Footer].collect do |section|
-        section.new(pdf, @person, {})
-      end
-    end
-
-    def logo_section
-      Export::Pdf::Passes::Sections::Logo.new(pdf, @person, {})
+      @sections ||=
+        [Export::Pdf::Passes::Sections::Logo, Header, Person, Footer].collect do |section|
+          section.new(pdf, @person, {})
+        end
     end
 
     def t(key)

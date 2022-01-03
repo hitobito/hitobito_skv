@@ -35,7 +35,7 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
   end
 
   def image_path(name)
-    File.join(File.dirname(__FILE__), '../../../../../assets/images/', name)
+    Wagons.find_wagon(__FILE__).root.join('app', 'assets', 'images', name)
   end
 
 end

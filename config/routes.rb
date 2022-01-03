@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   language_scope do
     get '/people/:id/membership' => 'people/membership#show', as: 'membership'
-    get '/verify_membership/:verify_token' => 'people/membership/verify#show'
+    get '/verify_membership/:verify_token' => 'people/membership/verify#show', as: 'verify_membership'
   end
 
 end
