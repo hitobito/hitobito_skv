@@ -28,6 +28,6 @@ class People::PaddlePassController < ApplicationController
   end
 
   def pdf_filename
-    "skv-paddle-pass-#{person.id}.pdf"
+    "skv-paddle-pass-#{person.full_name.parameterize(separator: '-')}.pdf"
   end
 end

@@ -61,7 +61,7 @@ module Export::Pdf::Passes::Sections::PaddlePasses
     end
 
     def epp_logo
-      image(image_path(EPP_LOGO), { position: :left, at: [20, cursor - 75] })
+      image(image_path(EPP_LOGO), { position: :left, at: [20, cursor - 110] })
     end
 
     def paddle_level_table_entries
