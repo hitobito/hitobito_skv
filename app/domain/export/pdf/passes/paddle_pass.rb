@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
+#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv.
+
+
+require_relative 'paddle_pass/content'
+
 module Export::Pdf::Passes
   class PaddlePass
     def initialize(person, options = {})
@@ -21,7 +31,7 @@ module Export::Pdf::Passes
     end
 
     def sections
-      @sections ||= [Sections::Logo, Sections::PaddlePasses::Content].collect do |section|
+      @sections ||= [Sections::Logo, Content].collect do |section|
         section.new(pdf, @person, @options)
       end
     end

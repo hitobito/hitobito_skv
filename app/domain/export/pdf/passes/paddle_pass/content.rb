@@ -1,4 +1,11 @@
-module Export::Pdf::Passes::Sections::PaddlePasses
+# frozen_string_literal: true
+
+#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv.
+
+class Export::Pdf::Passes::PaddlePass
   class Content < Export::Pdf::Section
     alias_method :person, :model
 
@@ -11,7 +18,6 @@ module Export::Pdf::Passes::Sections::PaddlePasses
       pdf.move_down 20
 
       stamped :title
-
       stamped :skv_info
 
       pdf.move_down 5.mm
@@ -21,7 +27,6 @@ module Export::Pdf::Passes::Sections::PaddlePasses
       pdf.move_down 5.mm
 
       stamped :paddle_levels
-
       stamped :epp_logo
     end
 
