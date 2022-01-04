@@ -20,11 +20,15 @@ module Skv
       def membership_pass_link
         return unless member?(template.entry)
 
-        add_item(translate(:membership), template.membership_path(format: :pdf), target: :new)
+        add_item(translate(:membership),
+                 template.membership_path(format: :pdf),
+                 target: :new)
       end
 
       def paddle_pass_link
-        add_item(translate(:paddle_pass), template.paddle_pass_group_person_path(format: :pdf), target: :new)
+        add_item(translate(:paddle_pass),
+                 template.paddle_pass_group_person_path(format: :pdf),
+                 target: :new)
       end
 
       def member?(person)
