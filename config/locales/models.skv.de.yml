@@ -198,3 +198,8 @@ de:
       group/verein/mitglied:
         one: Mitglied
         description: Mitglieder sind alle anderen.
+
+    attributes:
+      qualification_kind:
+        paddle_pass_relevant: Erscheint im Paddle Pass
+

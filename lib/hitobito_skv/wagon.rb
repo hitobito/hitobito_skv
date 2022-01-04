@@ -21,9 +21,16 @@ module HitobitoSkv
     ]
 
     config.to_prepare do
+      # extend application classes here
       Group.include Skv::Group
       Person.include Skv::Person
+      Qualification.include Skv::Qualification
+
+      # HELPERS
       Dropdown::PeopleExport.prepend Skv::Dropdown::PeopleExport
+
+      # CONTROLLERS
+      QualificationKindsController.permitted_attrs += [:paddle_pass_relevant]
     end
 
     initializer 'skv.add_settings' do |_app|

@@ -17,5 +17,10 @@ de:
       valid_until: Gültig bis
       licence_info: Gilt als Wettkampflizenz.
       file_name_prefix: SKV-Mitgliederausweis
+    paddle_pass:
+      title: Paddle Level Card
+      full_name: Vorname/Name
+      club: Club/Organisation
   dropdown/people_export:
     membership: Mitgliederausweis
+    paddle_pass: Paddle Level Card

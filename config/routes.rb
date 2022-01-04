@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   extend LanguageRouteScope
 
   language_scope do
+    # Define wagon routes here
+    
     get '/people/:id/membership' => 'people/membership#show', as: 'membership'
     get '/verify_membership/:verify_token' => 'people/membership/verify#show', as: 'verify_membership'
+
+    get '/people/:id/paddle_pass' => 'people/paddle_pass#show', as: 'paddle_pass'
   end
 
 end

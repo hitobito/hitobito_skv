@@ -12,18 +12,33 @@ module Skv
       def init_items
         super
         membership_pass_link
+        paddle_pass_link
       end
 
       private
 
       def membership_pass_link
-        return unless member?(template.entry)
+        return unless list_view? && member?(template.entry)
 
-        add_item(translate(:membership), template.membership_path(format: :pdf), target: :new)
+        add_item(translate(:membership),
+                 template.membership_path(format: :pdf),
+                 target: :new)
+      end
+
+      def paddle_pass_link
+        return unless list_view?
+
+        add_item(translate(:paddle_pass),
+                 template.paddle_pass_path(format: :pdf),
+                 target: :new)
       end
 
       def member?(person)
         People::MembershipVerifier.new(person).member?
+      end
+
+      def list_view?
+        template.entry.persisted?
       end
 
     end
