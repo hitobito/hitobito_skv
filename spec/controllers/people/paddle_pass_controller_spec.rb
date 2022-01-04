@@ -10,9 +10,12 @@ require 'spec_helper'
 describe People::PaddlePassController do
 
   let(:member) { people(:berner_kanufahrer) }
+  let(:be_vorstand) do
+    Fabricate('Group::KantonalverbandVorstand', parent: groups(:be))
+  end
   let(:vorstand) do
     Fabricate('Group::KantonalverbandVorstand::Vorstandsmitglied',
-              group: groups(:be_vorstand)).person
+              group: be_vorstand).person
   end
 
   context 'GET show' do
@@ -35,8 +38,11 @@ describe People::PaddlePassController do
     it 'is not possible to download paddle pass without access to person' do
       sign_in(member)
 
+      root = groups(:swiss_canoe)
+      praesident = people(:praesident)
+
       expect do
-        get :show, params: { group_id: vorstand.id, id: member.id, format: 'pdf' }
+        get :show, params: { group_id: root.id, id: praesident.id, format: 'pdf' }
       end.to raise_error(CanCan::AccessDenied)
     end
   end

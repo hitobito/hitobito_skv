@@ -1,7 +1,5 @@
 module Export::Pdf::Passes
   class PaddlePass
-    MARGIN = 1.cm
-
     def initialize(person, options = {})
       @person = person
       @options = options
@@ -33,8 +31,6 @@ module Export::Pdf::Passes
       @options.to_h.merge(
         page_size: 'A4',
         page_layout: :portrait,
-        margin: MARGIN,
-        compress: true
       )
     end
   end
