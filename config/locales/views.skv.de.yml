@@ -19,3 +19,4 @@ de:
       file_name_prefix: SKV-Mitgliederausweis
   dropdown/people_export:
     membership: Mitgliederausweis
+    paddle_pass: Paddle Level Card
