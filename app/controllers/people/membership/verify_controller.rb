@@ -33,7 +33,7 @@ class People::Membership::VerifyController < ActionController::Base # rubocop:di
   end
 
   def member?
-    @member ||= People::MembershipVerificator.new(person).member?
+    @member ||= People::MembershipVerifier.new(person).member?
   end
 
 end

@@ -9,26 +9,26 @@ require 'spec_helper'
 
 describe People::MembershipVerifier do
 
-  let(:verificator) { described_class.new(person) }
+  let(:verifier) { described_class.new(person) }
   let(:person) { people(:berner_kanufahrer) }
   let!(:external_group) { Group::ExterneKontakte.create!(parent: Group.root, name: 'Extis') }
 
   context '#member?' do
     it 'returns true if person has member role' do
-      expect(verificator.member?).to eq(true)
+      expect(verifier.member?).to eq(true)
     end
 
     it 'returns true if person has any non external role' do
       Fabricate(Group::ExterneKontakte::ExternerKontakt.name.to_sym,
                 group: external_group, person: person)
 
-      expect(verificator.member?).to eq(true)
+      expect(verifier.member?).to eq(true)
     end
 
     it 'returns false if person has no role' do
       person.roles.destroy_all
 
-      expect(verificator.member?).to eq(false)
+      expect(verifier.member?).to eq(false)
     end
 
     it 'returns false if person has only external role' do
@@ -36,7 +36,7 @@ describe People::MembershipVerifier do
       Fabricate(Group::ExterneKontakte::ExternerKontakt.name.to_sym,
                 group: external_group, person: person)
 
-      expect(verificator.member?).to eq(false)
+      expect(verifier.member?).to eq(false)
     end
   end
 
