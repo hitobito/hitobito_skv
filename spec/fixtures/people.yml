@@ -24,6 +24,13 @@ vorstandsmitglied:
   gender: w
   contact_data_visible: true
   primary_group: swiss_canoe_vorstand
+non_member:
+  first_name: Mrs
+  last_name: Extern
+  email: extern@hitobito.example.com
+  gender: w
+  contact_data_visible: true
+  primary_group:
 berner_kanufahrer:
   first_name: Berner
   last_name: Kanufan

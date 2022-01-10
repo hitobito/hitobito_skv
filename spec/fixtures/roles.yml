@@ -15,6 +15,10 @@ vorstandsmitglied:
   person: vorstandsmitglied
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Vorstandsmitglied
+non_member:
+  person: non_member
+  group: externe_kontakte
+  type: Group::ExterneKontakte::ExternerKontakt
 bern_kanu_club_member:
   person: berner_kanufahrer
   group: be_kanu_club

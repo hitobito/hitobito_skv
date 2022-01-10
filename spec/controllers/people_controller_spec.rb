@@ -11,6 +11,7 @@ describe PeopleController do
 
   let(:top_leader) { roles(:praesident).person }
   let(:top_member) { roles(:vorstandsmitglied).person }
+  let(:non_member) { roles(:non_member).person }
 
   context 'GET show' do
     context 'documents section' do
@@ -50,6 +51,15 @@ describe PeopleController do
         it { is_expected.not_to have_content 'Dokumente' }
         it { is_expected.not_to have_content 'Mitgliederausweis' }
         it { is_expected.not_to have_content 'Paddle Level Card' }
+      end
+
+      context 'for myself as non-member' do
+        let(:me) { non_member }
+        let(:person) { non_member }
+
+        it { is_expected.to have_content 'Dokumente' }
+        it { is_expected.not_to have_content 'Mitgliederausweis' }
+        it { is_expected.to have_content 'Paddle Level Card' }
       end
     end
   end
