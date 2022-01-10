@@ -26,9 +26,6 @@ module HitobitoSkv
       Person.include Skv::Person
       Qualification.include Skv::Qualification
 
-      # HELPERS
-      Dropdown::PeopleExport.prepend Skv::Dropdown::PeopleExport
-
       # CONTROLLERS
       QualificationKindsController.permitted_attrs += [:paddle_pass_relevant]
     end
