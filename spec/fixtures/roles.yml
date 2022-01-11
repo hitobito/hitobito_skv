@@ -1,4 +1,4 @@
-#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2012-2022, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
@@ -11,6 +11,14 @@ finanzchef:
   person: finanzchef
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Finanzchef
+vorstandsmitglied:
+  person: vorstandsmitglied
+  group: swiss_canoe_vorstand
+  type: Group::SwissCanoeVorstand::Vorstandsmitglied
+non_member:
+  person: non_member
+  group: externe_kontakte
+  type: Group::ExterneKontakte::ExternerKontakt
 bern_kanu_club_member:
   person: berner_kanufahrer
   group: be_kanu_club

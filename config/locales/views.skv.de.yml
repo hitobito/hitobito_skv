@@ -4,6 +4,12 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 de:
+  people:
+    show_event_skv:
+      documents: Dokumente
+      download: Anzeigen
+      membership: Mitgliederausweis
+      paddle_pass: Paddle Level Card
   verify_membership:
     title: Verifizierung SKV Mitgliedschaft
     not_found: Ungültiger Verifikationscode
@@ -21,6 +27,3 @@ de:
       title: Paddle Level Card
       full_name: Vorname/Name
       club: Club/Organisation
-  dropdown/people_export:
-    membership: Mitgliederausweis
-    paddle_pass: Paddle Level Card

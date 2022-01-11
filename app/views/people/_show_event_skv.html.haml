@@ -1,0 +1,15 @@
+-#  Copyright (c) 2022, Swiss Canoe. This file is part of
+-#  hitobito_skv and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_skv.
+
+- if can? :update, entry
+  %h2= t('.documents')
+  %div
+    %dl.dl-horizontal
+      - if People::MembershipVerifier.new(entry).member?
+        = labeled t('.membership') do
+          = link_to t('.download'), membership_path(format: :pdf), target: :new
+
+      = labeled t('.paddle_pass') do
+        = link_to t('.download'), paddle_pass_path(format: :pdf), target: :new
