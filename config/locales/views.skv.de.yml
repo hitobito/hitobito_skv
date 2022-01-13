@@ -18,8 +18,7 @@ de:
   passes:
     membership:
       title: Mitgliederausweis
-      member: Mitglied
-      group: Sektion
+      layer: Sektion
       valid_until: Gültig bis
       licence_info: Gilt als Wettkampflizenz.
       file_name_prefix: SKV-Mitgliederausweis
