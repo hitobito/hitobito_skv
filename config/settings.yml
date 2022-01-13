@@ -15,6 +15,10 @@ application:
     image: swiss_canoe.png
     width: 130
     height: 90
+  white_logo:
+    image: swiss_canoe_white.png
+    width: 130
+    height: 90
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,

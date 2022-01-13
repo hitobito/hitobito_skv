@@ -13,7 +13,7 @@
     = stylesheet_pack_tag 'application'
   %body.membership-verify
     %header
-      = header_logo
+      = wagon_image_pack_tag(Settings.application.white_logo.image, alt: Settings.application.name)
       .root-address
         = root.address_name
         = root.complete_address
