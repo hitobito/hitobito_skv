@@ -32,7 +32,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def row_membership
-      attrs = [[t('member'), 'tbd', t('group'), group_name]]
+      attrs = [[t('layer'), layer_name]]
       pdf.make_table(attrs) do
         cells.borders = []
         cells.size = 16
@@ -66,9 +66,9 @@ class Export::Pdf::Passes::Membership
       person.membership_verify_token.presence || person.init_membership_verify_token!
     end
 
-    def group_name
+    def layer_name
       group = person.primary_group.presence || person.groups.first
-      group.short_name.presence || group.name
+      group.layer_group.display_name
     end
 
     def t(key)
