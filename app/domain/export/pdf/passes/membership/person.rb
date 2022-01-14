@@ -68,8 +68,7 @@ class Export::Pdf::Passes::Membership
 
     def layer_name
       group = person.primary_group.presence || person.groups.first
-      layer = group.layer_group
-      layer.short_name.presence || layer.name
+      group.layer_group.display_name
     end
 
     def t(key)
