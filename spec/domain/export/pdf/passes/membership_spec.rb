@@ -32,13 +32,15 @@ describe Export::Pdf::Passes::Membership do
         [282, 723, 'Swiss Canoe Federation'],
         [131, 634, "Mitgliederausweis #{year}"],
         [66, 602, 'CH-8000 Zürich - Phone +41 43 222 40 77 - info@swisscanoe.ch - www.swisscanoe.ch'],
-        [41, 557, 'Sektion'],
-        [104, 557, 'Kanu Club Bern'],
-        [41, 436, 'Berner Kanufan'],
-        [41, 408, 'Wasserstrasse 42'],
-        [41, 379, '4242 Kanuto'],
-        [36, 276, "Gültig bis: 31.12.#{year}"],
-        [36, 247, 'Gilt als Wettkampflizenz. / Is regarded as competition licence.']
+        [41, 528, 'Sektion'],
+        [41, 557, "Mitgliedernummer"],
+        [179, 528, "Kanu Club Bern"],
+        [179, 557, "003-000"],
+        [41, 422, 'Berner Kanufan'],
+        [41, 394, 'Wasserstrasse 42'],
+        [41, 365, '4242 Kanuto'],
+        [36, 277, "Gültig bis: 31.12.#{year}"],
+        [36, 248, 'Gilt als Wettkampflizenz. / Is regarded as competition licence.']
       ]
     end
   end

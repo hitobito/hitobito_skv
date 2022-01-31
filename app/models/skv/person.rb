@@ -17,4 +17,8 @@ module Skv::Person
     update!(membership_verify_token: token)
     token
   end
+
+  def membership_number
+    format('%06d', id).gsub(/(\d)(?=(\d\d\d)+(?!\d))/, '\\1-')
+  end
 end

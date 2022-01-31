@@ -4,6 +4,7 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 praesident:
+  id: 42
   first_name: Mrs
   last_name: President
   email: president@hitobito.example.com
@@ -11,6 +12,7 @@ praesident:
   contact_data_visible: true
   primary_group: root
 finanzchef:
+  id: 123
   first_name: Mr
   last_name: Finanzchef
   email: finanzchef@hitobito.example.com
@@ -18,6 +20,7 @@ finanzchef:
   contact_data_visible: true
   primary_group: swiss_canoe_vorstand
 vorstandsmitglied:
+  id: 54321
   first_name: Mrs
   last_name: Vorstandsmitglied
   email: vorstandsmitglied@hitobito.example.com
@@ -25,6 +28,7 @@ vorstandsmitglied:
   contact_data_visible: true
   primary_group: swiss_canoe_vorstand
 non_member:
+  id: 1023
   first_name: Mrs
   last_name: Extern
   email: extern@hitobito.example.com
@@ -32,6 +36,7 @@ non_member:
   contact_data_visible: true
   primary_group:
 berner_kanufahrer:
+  id: 3000
   first_name: Berner
   last_name: Kanufan
   email: kanubernmember@hitobito.example.com
