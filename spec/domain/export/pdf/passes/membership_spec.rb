@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2022, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
@@ -33,9 +33,9 @@ describe Export::Pdf::Passes::Membership do
         [131, 634, "Mitgliederausweis #{year}"],
         [66, 602, 'CH-8000 Zürich - Phone +41 43 222 40 77 - info@swisscanoe.ch - www.swisscanoe.ch'],
         [41, 528, 'Sektion'],
-        [41, 557, "Mitgliedernummer"],
-        [179, 528, "Kanu Club Bern"],
-        [179, 557, "003-000"],
+        [41, 557, 'Mitgliedernummer'],
+        [179, 528, 'Kanu Club Bern'],
+        [179, 557, '418-312-524'],
         [41, 422, 'Berner Kanufan'],
         [41, 394, 'Wasserstrasse 42'],
         [41, 365, '4242 Kanuto'],

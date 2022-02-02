@@ -19,6 +19,6 @@ module Skv::Person
   end
 
   def membership_number
-    format('%06d', id).gsub(/(\d)(?=(\d\d\d)+(?!\d))/, '\\1-')
+    id.to_s.rjust(6, '0').scan(/.{1,3}/).join('-')
   end
 end

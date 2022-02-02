@@ -4,22 +4,22 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 praesident:
-  person_id: 42
+  person: praesident
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Praesident
 finanzchef:
-  person_id: 123
+  person: finanzchef
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Finanzchef
 vorstandsmitglied:
-  person_id: 54321
+  person: vorstandsmitglied
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Vorstandsmitglied
 non_member:
-  person_id: 1023
+  person: non_member
   group: externe_kontakte
   type: Group::ExterneKontakte::ExternerKontakt
 bern_kanu_club_member:
-  person_id: 3000
+  person: berner_kanufahrer
   group: be_kanu_club
   type: Group::Sektion::Aktivmitglied
