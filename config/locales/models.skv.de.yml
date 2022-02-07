@@ -202,4 +202,6 @@ de:
     attributes:
       qualification_kind:
         paddle_pass_relevant: Erscheint im Paddle Pass
+      person:
+        membership_number: Mitgliedernummer
 

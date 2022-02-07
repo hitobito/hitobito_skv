@@ -32,7 +32,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def row_membership
-      attrs = [[t('layer'), layer_name]]
+      attrs = [[t('membership_number'), person.membership_number], [t('layer'), layer_name]]
       pdf.make_table(attrs) do
         cells.borders = []
         cells.size = 16
@@ -49,7 +49,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def verify_qr_code
-      qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 250).to_s
+      qr_code = RQRCode::QRCode.new(verify_url).as_png(size: 220).to_s
       StringIO.new(qr_code)
     end
 

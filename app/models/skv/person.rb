@@ -17,4 +17,8 @@ module Skv::Person
     update!(membership_verify_token: token)
     token
   end
+
+  def membership_number
+    id.to_s.rjust(6, '0').scan(/.{1,3}/).join('-')
+  end
 end
