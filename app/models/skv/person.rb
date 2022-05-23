@@ -10,6 +10,8 @@ module Skv::Person
 
   included do
     validates :membership_verify_token, uniqueness: { allow_blank: true }
+    
+    Person::INTERNAL_ATTRS << :membership_verify_token
   end
 
   def init_membership_verify_token!
