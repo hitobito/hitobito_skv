@@ -26,4 +26,5 @@ de:
     paddle_pass:
       title: Paddle Level Card
       full_name: Vorname/Name
+      membership_number: Mitgliedernummer
       club: Club/Organisation
