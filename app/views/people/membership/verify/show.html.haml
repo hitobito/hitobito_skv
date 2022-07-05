@@ -21,7 +21,7 @@
       #content
         - if person
           .member-img
-            = image_tag(upload(person, :picture))
+            = image_tag(upload_url(person, :picture))
           .member-name
             = person.full_name
           - if member?
