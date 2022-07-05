@@ -9,7 +9,7 @@ class Export::Pdf::Passes::PaddlePass
   class Content < Export::Pdf::Section
     alias_method :person, :model
 
-    PERSON_INFO_BOX = [300, 80]
+    PERSON_INFO_BOX = [300, 120]
     PADDLE_LEVELS_BOX = [400, 300]
 
     EPP_LOGO = 'epp_paddle_pass.png'.freeze
@@ -47,7 +47,9 @@ class Export::Pdf::Passes::PaddlePass
       font_size(22.pt)
 
       bounding_box([0, cursor], width: width, height: height) do
-        table([ [t(:full_name), person.full_name], [t(:club), club_name] ],
+        table([[t(:full_name), person.full_name],
+               [t(:membership_number), person.membership_number],
+               [t(:club), club_name]],
               width: width,
               cell_style: { borders: [] } )
       end
@@ -66,7 +68,7 @@ class Export::Pdf::Passes::PaddlePass
     end
 
     def epp_logo
-      image(image_path(EPP_LOGO), { position: :left, at: [20, cursor - 110] })
+      image(image_path(EPP_LOGO), { position: :left, at: [20, 24] })
     end
 
     def paddle_level_table_entries

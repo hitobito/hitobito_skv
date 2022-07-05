@@ -31,22 +31,24 @@ describe Export::Pdf::Passes::PaddlePass do
   context 'text' do
 
     it 'renders paddle pass' do
-      expect(text_with_position).to match_array [
-        [260, 756, 'Schweizerischer Kanu-Verband'],
-        [248, 740, 'Fédération Suisse de Canoë-Kayak'],
-        [282, 723, 'Swiss Canoe Federation'],
+      expect(text_with_position).to eq [
+        [260, 756, "Schweizerischer Kanu-Verband"],
+        [248, 740, "Fédération Suisse de Canoë-Kayak"],
+        [282, 723, "Swiss Canoe Federation"],
         [169, 634, "Paddle Level Card"],
         [255, 612, "CH-8000 Zürich"],
         [232, 598, "Phone +41 43 222 40 77"],
         [185, 584, "info@swisscanoe.ch - www.swisscanoe.ch"],
         [41, 539, "Vorname/Name"],
         [310, 539, "Berner Kanufan"],
-        [41, 503, "Club/Organisation"],
-        [310, 503, "Kanu Club Bern"],
-        [41, 451, "Paddle Level 3 Seakayak"],
-        [340, 451, "06/2020"],
-        [41, 424, "Paddle Level 2 SUP"],
-        [340, 424, "10/2021"]
+        [41, 503, "Mitgliedernummer"],
+        [310, 503, "418-312-524"],
+        [41, 468, "Club/Organisation"],
+        [310, 468, "Kanu Club Bern"],
+        [41, 411, "Paddle Level 3 Seakayak"],
+        [340, 411, "06/2020"],
+        [41, 384, "Paddle Level 2 SUP"],
+        [340, 384, "10/2021"]
       ]
     end
   end
