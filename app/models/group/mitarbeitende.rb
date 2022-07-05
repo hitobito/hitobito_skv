@@ -7,6 +7,8 @@
 
 
 class Group::Mitarbeitende < ::Group
+  self.event_types = [Event, Event::Course]
+
   class Trainer < ::Role
     self.permissions = [:group_full]
   end
