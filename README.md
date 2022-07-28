@@ -15,6 +15,7 @@ A hitobito wagon defining the organization hierarchy and additional features for
   - Mitarbeitende
     - Trainer\*in: [:group_full]
     - Mitarbeitende\*r: [:group_read]
+    - Back-Office: [:layer_and_below_full, :admin]
   - Externe Kontakte
     - Externer Kontakt: []
     - Swiss Canoe Partner: []
