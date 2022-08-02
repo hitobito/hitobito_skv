@@ -3,7 +3,221 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 fr:
   activerecord:
     models:
+
+      ### GROUPS
+
+      group/swiss_canoe:
+        one: ''
+        many: ''
+        other: ''
+
+      group/swiss_canoe_vorstand:
+        one: ''
+        many: ''
+        other: ''
+
+      group/mitglieder:
+        one: ''
+        many: ''
+        other: ''
+
+      group/paddle_level:
+        one: ''
+        many: ''
+        other: ''
+
+      group/geschaeftsleitung:
+        one: ''
+        many: ''
+        other: ''
+
+      group/mitarbeitende:
+        one: ''
+        many: ''
+        other: ''
+
+      group/externe_kontakte:
+        one: ''
+        many: ''
+        other: ''
+
+      group/fachkommission:
+        one: ''
+        many: ''
+        other: ''
+
+      group/kantonalverband:
+        one: ''
+        many: ''
+        other: ''
+
+      group/kantonalverband_vorstand:
+        one: ''
+        many: ''
+        other: ''
+
+      group/sektion:
+        one: ''
+        many: ''
+        other: ''
+
+      group/sektion_vorstand:
+        one: ''
+        many: ''
+        other: ''
+
+      group/projektgruppe:
+        one: ''
+        many: ''
+        other: ''
+
+      group/regionale_leistungszentren:
+        one: ''
+        many: ''
+        other: ''
+
+      group/nationalmannschaft:
+        one: ''
+        many: ''
+        other: ''
+
+      group/verein:
+        one: ''
+        many: ''
+        other: ''
+
+      ### ROLES
+
+      group/mitglieder/mitglied:
+        one: ""
+        description: ""
+      group/mitglieder/ehrenmitglied:
+        one: ""
+        description: ""
+      group/mitglieder/nachwuchsmitglied:
+        one: ""
+        description: ""
+      group/paddle_level/anbieter:
+        one: ""
+        description: ""
+      group/paddle_level/assessor:
+        one: ""
+        description: ""
+      group/paddle_level/koordinator:
+        one: ""
+        description: ""
+
+      group/swiss_canoe_vorstand/praesident:
+        one: ""
+        description: ""
+      group/swiss_canoe_vorstand/finanzchef:
+        one: ""
+        description: ""
+      group/swiss_canoe_vorstand/vorstandsmitglied:
+        one: ""
+        description: ""
+
+      group/geschaeftsleitung/mitarbeitende:
+        one: ""
+        description: ""
+
+      group/mitarbeitende/trainer:
+        one: ""
+        description: ""
+      group/mitarbeitende/mitarbeitende:
+        one: ""
+        description: ""
+      group/mitarbeitende/back_office:
+        one: ""
+        description: ""
+
+      group/externe_kontakte/externer_kontakt:
+        one: ""
+        description: ""
+      group/externe_kontakte/swiss_canoe_partner:
+        one: ""
+        description: ""
+
+      group/fachkommission/chef:
+        one: ""
+        description: ""
+      group/fachkommission/mitglied:
+        one: ""
+        description: ""
+
+      group/kantonalverband_vorstand/praesident:
+        one: ""
+        description: ""
+      group/kantonalverband_vorstand/vorstandsmitglied:
+        one: ""
+        description: ""
+      group/kantonalverband_vorstand/finanzchef:
+        one: ""
+        description: ""
+
+      group/sektion_vorstand/praesident:
+        one: ""
+        description: ""
+      group/sektion_vorstand/kassier:
+        one: ""
+        description: ""
+      group/sektion_vorstand/sekretaer:
+        one: ""
+        description: ""
+      group/sektion_vorstand/vorstandsmitglied:
+        one: ""
+        description: ""
+
+      group/sektion/js_coach:
+        one: ""
+        description: ""
+      group/sektion/junior:
+        one: ""
+        description: ""
+      group/sektion/aktivmitglied:
+        one: ""
+        description: ""
+      group/sektion/passivmitglied:
+        one: ""
+        description: ""
+      group/sektion/ehrenmitglied:
+        one: ""
+        description: ""
+
+      group/projektgruppe/mitglied:
+        one: ""
+        description: ""
+      group/projektgruppe/leitung:
+        one: ""
+        description: ""
+
+      group/regionale_leistungszentren/leitung:
+        one: ""
+        description: ""
+      group/regionale_leistungszentren/mitglied:
+        one: ""
+        description: ""
+
+      group/nationalmannschaft/trainer:
+        one: ""
+        description: ""
+      group/nationalmannschaft/kaderathlet:
+        one: ""
+        description: ""
+
+      group/verein/leitung:
+        one: ""
+        description:
+      group/verein/mitglied:
+        one: ""
+        description: ""
+
+    attributes:
+      qualification_kind:
+        paddle_pass_relevant: ""
+      person:
+        membership_number: ""
+
