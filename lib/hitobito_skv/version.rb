@@ -7,5 +7,5 @@
 
 
 module HitobitoSkv
-  VERSION = '1.27.6'
+  VERSION = '1.28.8'
 end
