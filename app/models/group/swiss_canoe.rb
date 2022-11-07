@@ -6,6 +6,8 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Group::SwissCanoe < ::Group
+  self.event_types = [Event, Event::Course]
+
   self.layer = true
 
   children(
