@@ -9,9 +9,9 @@ require 'spec_helper'
 
 describe PeopleController do
 
-  let(:top_leader) { roles(:praesident).person }
-  let(:top_member) { roles(:vorstandsmitglied).person }
-  let(:non_member) { roles(:non_member).person }
+  let(:top_leader) { people(:gl_mitarbeitende) }
+  let(:top_member) { people(:vorstandsmitglied) }
+  let(:non_member) { people(:non_member) }
 
   context 'GET show' do
     context 'documents section' do

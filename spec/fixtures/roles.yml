@@ -7,6 +7,10 @@ praesident:
   person: praesident
   group: swiss_canoe_vorstand
   type: Group::SwissCanoeVorstand::Praesident
+gl_mitarbeitende:
+  person: gl_mitarbeitende
+  group: geschaeftsleitung
+  type: Group::Geschaeftsleitung::Mitarbeitende
 finanzchef:
   person: finanzchef
   group: swiss_canoe_vorstand
