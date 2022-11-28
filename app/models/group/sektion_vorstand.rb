@@ -8,19 +8,19 @@
 
 class Group::SektionVorstand < ::Group
   class Praesident < ::Role
-    self.permissions = [:group_full]
+    self.permissions = [:layer_and_below_full]
   end
 
   class Vorstandsmitglied < ::Role
-    self.permissions = [:group_full]
+    self.permissions = [:layer_and_below_full]
   end
 
   class Sekretaer < ::Role
-    self.permissions = [:group_full]
+    self.permissions = [:layer_and_below_full]
   end
 
   class Kassier < ::Role
-    self.permissions = [:finance]
+    self.permissions = [:layer_and_below_full, :finance]
   end
 
   roles Praesident, Vorstandsmitglied, Sekretaer, Kassier
