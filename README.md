@@ -7,13 +7,13 @@ A hitobito wagon defining the organization hierarchy and additional features for
 
 - Schweizerischer Kanu-Verband
   - Vorstand
-    - Präsident\*in: [:group_full]
-    - Finanzchef\*in: [:group_full, :finance]
-    - Vorstandsmitglied: [:group_read]
+    - Präsident\*in: [:layer_and_below_read]
+    - Finanzchef\*in: [:layer_and_below_read, :finance]
+    - Vorstandsmitglied: [:layer_and_below_read]
   - Geschäftsleitung
-    - Mitarbeitende\*r: [:layer_and_below_full]
+    - Mitarbeitende\*r: [:layer_and_below_full, :admin]
   - Mitarbeitende
-    - Trainer\*in: [:group_full]
+    - Trainer\*in: [:group_read]
     - Mitarbeitende\*r: [:group_read]
     - Back-Office: [:layer_and_below_full, :admin]
   - Externe Kontakte
@@ -23,7 +23,7 @@ A hitobito wagon defining the organization hierarchy and additional features for
     - Chef\*in: [:group_full]
     - Mitglied: [:group_read]
   - Mitglieder
-    - Mitglied: [:group_read]
+    - Mitglied: []
     - Ehrenmitglied: []
     - Nachwuchsmitglied: []
   - Paddle Level
@@ -36,24 +36,23 @@ A hitobito wagon defining the organization hierarchy and additional features for
   - Regionale Leistungszentrum
     - Leitung: [:group_full]
     - Mitglied: [:group_read]
-- Kantonalverband
-  - Vorstand
-    - Präsident\*in: [:layer_and_below_full]
-    - Vorstandsmitglied: [:layer_and_below_full]
-    - Finanzchef\*in: [:group_read, :finance]
-- Global
+- Sektion
   - Sektion
-    - Vorstand
-      - Präsident:in [:group_full]
-      - Kassier:in [:finance]
-      - Sekretär:in [:group_full]
-      - Vorstandsmitglied [:group_full]
-    - Projektgruppe
-      - Mitglied [:group_read]
-      - Leitung [:group_full]
-    - Finanzchef\*in: [:group_read, :finance]
     - J+S Coach: [:group_full]
     - Junior\*in: [:group_read]
     - Aktivmitglied: [:group_read]
     - Passivmitglied: [:group_read]
     - Ehrenmitglied: []
+  - Projektgruppe
+    - Mitglied: [:group_read]
+    - Leitung: [:group_full]
+  - Vorstand
+    - Präsident\*in: [:layer_and_below_full]
+    - Vorstandsmitglied: [:layer_and_below_full]
+    - Sekretär\*in: [:layer_and_below_full]
+    - Kassier\*in: [:layer_and_below_full, :finance]
+- Kantonalverband
+  - Vorstand
+    - Präsident\*in: [:layer_and_below_full]
+    - Vorstandsmitglied: [:layer_and_below_full]
+    - Finanzchef\*in: [:group_read, :finance]

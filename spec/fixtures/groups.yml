@@ -31,13 +31,24 @@ externe_kontakte:
   lft: 4
   rgt: 5
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
+geschaeftsleitung:
+  parent: swiss_canoe
+  name: Geschaeftsleitung
+  type: Group::Geschaeftsleitung
+  lft: 6
+  rgt: 7
+  email: alta.haley@example.org
+  address: Schellingstr. 8
+  zip_code: 5692
+  town: Damianburg
+  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
 be:
   parent: swiss_canoe
   name: Bern
   short_name: BE
   type: Group::Kantonalverband
-  lft: 6
-  rgt: 9
+  lft: 8
+  rgt: 11
   email: bern@be.ch
   address: Klostergasse 3
   zip_code: 3333
@@ -59,8 +70,8 @@ be_kanu_club:
   parent: be
   name: Kanu Club Bern
   type: Group::Sektion
-  lft: 7
-  rgt: 8
+  lft: 9
+  rgt: 10
   email: verner@example.com
   address: Glücksburger Str. 50a
   zip_code: 6809

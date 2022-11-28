@@ -7,7 +7,7 @@
 
 class Group::Mitglieder < ::Group
   class Mitglied < ::Role
-    self.permissions = [:group_read]
+    self.permissions = []
   end
 
   class Ehrenmitglied < ::Role; end

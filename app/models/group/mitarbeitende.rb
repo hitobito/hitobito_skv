@@ -8,7 +8,7 @@
 
 class Group::Mitarbeitende < ::Group
   class Trainer < ::Role
-    self.permissions = [:group_full]
+    self.permissions = [:group_read]
   end
 
   class Mitarbeitende < ::Role

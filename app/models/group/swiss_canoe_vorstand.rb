@@ -8,15 +8,15 @@
 
 class Group::SwissCanoeVorstand < ::Group
   class Praesident < ::Role
-    self.permissions = [:group_full]
+    self.permissions = [:layer_and_below_read]
   end
 
   class Finanzchef < ::Role
-    self.permissions = [:group_full, :finance]
+    self.permissions = [:layer_and_below_read, :finance]
   end
 
   class Vorstandsmitglied < ::Role
-    self.permissions = [:group_read]
+    self.permissions = [:layer_and_below_read]
   end
 
   roles Praesident, Finanzchef, Vorstandsmitglied

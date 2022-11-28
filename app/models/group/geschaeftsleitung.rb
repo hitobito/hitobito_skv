@@ -8,7 +8,7 @@
 
 class Group::Geschaeftsleitung < ::Group
   class Mitarbeitende < ::Role
-    self.permissions = [:layer_and_below_full]
+    self.permissions = [:layer_and_below_full, :admin]
   end
 
   roles Mitarbeitende

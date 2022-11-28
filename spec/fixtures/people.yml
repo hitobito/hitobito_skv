@@ -10,6 +10,12 @@ praesident:
   gender: w
   contact_data_visible: true
   primary_group: root
+gl_mitarbeitende:
+  first_name: GL
+  last_name: Mitarbeitende
+  email: gl@hitobito.example.com
+  gender: w
+  primary_group: root
 finanzchef:
   first_name: Mr
   last_name: Finanzchef
