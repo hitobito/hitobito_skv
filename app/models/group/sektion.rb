@@ -19,17 +19,11 @@ class Group::Sektion < ::Group
     self.permissions = [:group_full]
   end
 
-  class Junior < ::Role
-    self.permissions = [:group_read]
-  end
+  class Junior < ::Role; end
 
-  class Aktivmitglied < ::Role
-    self.permissions = [:group_read]
-  end
+  class Aktivmitglied < ::Role; end
 
-  class Passivmitglied < ::Role
-    self.permissions = [:group_read]
-  end
+  class Passivmitglied < ::Role; end
 
   class Ehrenmitglied < ::Role; end
 
