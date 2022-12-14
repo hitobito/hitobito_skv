@@ -45,7 +45,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def person_address
-      person.address_for_letter
+      ::Person::Address.new(person).for_letter
     end
 
     def verify_qr_code
