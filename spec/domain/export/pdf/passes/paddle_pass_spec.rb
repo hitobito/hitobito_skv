@@ -19,9 +19,9 @@ describe Export::Pdf::Passes::PaddlePass do
     member.update!(address: 'Wasserstrasse 42', zip_code: '4242', town: 'Kanuto')
 
     [{ label: 'Paddle Level 4 Whitewater Kayak', start_at: Date.new(2019, 3, 2) },
-     { label: 'Paddle Level 3 Seakayak', start_at: Date.new(2020, 6, 20) },
+     { label: 'Paddle Level 3 Seakayak', start_at: Date.new(year - 2, 6, 20) },
      { label: 'Paddle Level 3 Touring', start_at: Date.new(2019, 7, 10) },
-     { label: 'Paddle Level 2 SUP', start_at: Date.new(2021, 10, 23) }].each do |attrs|
+     { label: 'Paddle Level 2 SUP', start_at: Date.new(year - 1, 10, 23) }].each do |attrs|
        kind = Fabricate(:qualification_kind, label: attrs[:label], paddle_pass_relevant: true)
 
        Fabricate(:qualification, person: member, qualification_kind: kind, start_at: attrs[:start_at])
@@ -46,9 +46,9 @@ describe Export::Pdf::Passes::PaddlePass do
         [41, 468, "Club/Organisation"],
         [310, 468, "Kanu Club Bern"],
         [41, 411, "Paddle Level 3 Seakayak"],
-        [340, 411, "06/2020"],
+        [340, 411, "06/#{year - 2}"],
         [41, 384, "Paddle Level 2 SUP"],
-        [340, 384, "10/2021"]
+        [340, 384, "10/#{year - 1}"]
       ]
     end
   end
