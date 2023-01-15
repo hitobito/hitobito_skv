@@ -8,6 +8,7 @@
 class Group::Nationalmannschaft < ::Group
   class Trainer < ::Role
     self.permissions = [:group_full]
+    self.nextcloud_group = 'Trainer'
   end
 
   class Kaderathlet < ::Role
