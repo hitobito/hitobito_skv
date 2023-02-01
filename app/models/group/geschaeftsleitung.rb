@@ -9,6 +9,7 @@
 class Group::Geschaeftsleitung < ::Group
   class Mitarbeitende < ::Role
     self.permissions = [:layer_and_below_full, :admin]
+    self.nextcloud_group = 'Geschäftsleitung'
   end
 
   roles Mitarbeitende

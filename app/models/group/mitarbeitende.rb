@@ -9,6 +9,7 @@
 class Group::Mitarbeitende < ::Group
   class Trainer < ::Role
     self.permissions = [:group_read]
+    self.nextcloud_group = 'Trainer'
   end
 
   class Mitarbeitende < ::Role
@@ -17,6 +18,7 @@ class Group::Mitarbeitende < ::Group
 
   class BackOffice < ::Role
     self.permissions = [:layer_and_below_full, :admin]
+    self.nextcloud_group = 'BackOffice'
   end
 
   roles Trainer, Mitarbeitende, BackOffice

@@ -32,3 +32,7 @@ messages:
 
 assignments:
   enabled: true
+
+groups:
+  nextcloud:
+    enabled: true

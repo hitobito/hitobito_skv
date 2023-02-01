@@ -8,10 +8,12 @@
 class Group::Fachkommission < ::Group
   class Chef < ::Role
     self.permissions = [:group_full]
+    self.nextcloud_group = true
   end
 
   class Mitglied < ::Role
     self.permissions = [:group_read]
+    self.nextcloud_group = true
   end
 
   roles Chef, Mitglied

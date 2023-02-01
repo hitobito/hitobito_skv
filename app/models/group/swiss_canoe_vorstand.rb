@@ -9,14 +9,17 @@
 class Group::SwissCanoeVorstand < ::Group
   class Praesident < ::Role
     self.permissions = [:layer_and_below_read]
+    self.nextcloud_group = 'Vorstand'
   end
 
   class Finanzchef < ::Role
     self.permissions = [:layer_and_below_read, :finance]
+    self.nextcloud_group = 'Vorstand'
   end
 
   class Vorstandsmitglied < ::Role
     self.permissions = [:layer_and_below_read]
+    self.nextcloud_group = 'Vorstand'
   end
 
   roles Praesident, Finanzchef, Vorstandsmitglied
