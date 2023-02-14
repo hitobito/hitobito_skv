@@ -1,13 +1,13 @@
 [main]
 host = https://www.transifex.com
-type = YML
 
-[hitobito_skv.models-skv]
+[o:hitobito:p:hitobito_skv:r:models-skv]
 file_filter = config/locales/models.skv.<lang>.yml
 source_file = config/locales/models.skv.de.yml
 source_lang = de
 
-[hitobito_skv.views-skv]
+[o:hitobito:p:hitobito_skv:r:views-skv]
 file_filter = config/locales/views.skv.<lang>.yml
 source_file = config/locales/views.skv.de.yml
 source_lang = de
+
