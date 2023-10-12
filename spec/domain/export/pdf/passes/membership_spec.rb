@@ -36,9 +36,9 @@ describe Export::Pdf::Passes::Membership do
         [41, 557, 'Mitgliedernummer'],
         [179, 528, 'Kanu Club Bern'],
         [179, 557, '418-312-524'],
-        [41, 422, 'Berner Kanufan'],
-        [41, 394, 'Wasserstrasse 42'],
-        [41, 365, '4242 Kanuto'],
+        [41, 420, 'Berner Kanufan'],
+        [41, 391, 'Wasserstrasse 42'],
+        [41, 363, '4242 Kanuto'],
         [36, 277, "Gültig bis: 31.12.#{year}"],
         [36, 248, 'Gilt als Wettkampflizenz. / Is regarded as competition licence.']
       ]
