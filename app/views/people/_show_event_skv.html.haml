@@ -4,7 +4,7 @@
 -#  https://github.com/hitobito/hitobito_skv.
 
 - if can? :update, entry
-  %h2= t('.documents')
+  %h2.mt-3= t('.documents')
   %div
     %dl.dl-horizontal
       - if People::MembershipVerifier.new(entry).member?
