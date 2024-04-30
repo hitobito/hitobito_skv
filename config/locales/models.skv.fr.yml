@@ -10,214 +10,214 @@ fr:
       ### GROUPS
 
       group/swiss_canoe:
-        one: ''
-        many: ''
-        other: ''
+        one: Fédération suisse de canoë-kayak
+        many: Fédération suisse de canoë-kayak
+        other: Fédération suisse de canoë-kayak
 
       group/swiss_canoe_vorstand:
-        one: ''
-        many: ''
-        other: ''
+        one: Comité
+        many: Comités
+        other: Comités
 
       group/mitglieder:
-        one: ''
-        many: ''
-        other: ''
+        one: Adhérent
+        many: Adhérents
+        other: Adhérents
 
       group/paddle_level:
-        one: ''
-        many: ''
-        other: ''
+        one: Paddle Level
+        many: Paddle Level
+        other: Paddle Level
 
       group/geschaeftsleitung:
-        one: ''
-        many: ''
-        other: ''
+        one: Direction
+        many: Directions
+        other: Directions
 
       group/mitarbeitende:
-        one: ''
-        many: ''
-        other: ''
+        one: Salarié
+        many: Salariés
+        other: Salariés
 
       group/externe_kontakte:
-        one: ''
-        many: ''
-        other: ''
+        one: Contact externe
+        many: Contacts externes
+        other: Contacts externes
 
       group/fachkommission:
-        one: ''
-        many: ''
-        other: ''
+        one: Commission technique
+        many: Commissions techniques
+        other: Commissions techniques
 
       group/kantonalverband:
-        one: ''
-        many: ''
-        other: ''
+        one: Association cantonale
+        many: Associations cantonales
+        other: Associations cantonales
 
       group/kantonalverband_vorstand:
-        one: ''
-        many: ''
-        other: ''
+        one: Comité directeur
+        many: Comités directeurs
+        other: Comités directeurs
 
       group/sektion:
-        one: ''
-        many: ''
-        other: ''
+        one: Section
+        many: Sections
+        other: Section
 
       group/sektion_vorstand:
-        one: ''
-        many: ''
-        other: ''
+        one: Comité directeur
+        many: Comités directeurs
+        other: Comités directeurs
 
       group/projektgruppe:
-        one: ''
-        many: ''
-        other: ''
+        one: Groupe de projet
+        many: Groupes de projet
+        other: Groupes de projet
 
       group/regionale_leistungszentren:
-        one: ''
-        many: ''
-        other: ''
+        one: Centre régional de performance
+        many: Centres régionaux de performance
+        other: Centres régionaux de performance
 
       group/nationalmannschaft:
-        one: ''
-        many: ''
-        other: ''
+        one: Équipe nationale
+        many: Équipes nationales
+        other: Équipes nationales
 
       group/verein:
-        one: ''
-        many: ''
-        other: ''
+        one: Association
+        many: Associations
+        other: Associations
 
       ### ROLES
 
       group/mitglieder/mitglied:
-        one: ""
-        description: ""
+        one: Adhérant
+        description: Adhérant
       group/mitglieder/ehrenmitglied:
-        one: ""
-        description: ""
+        one: Membre honoraire
+        description: Membre honoraire
       group/mitglieder/nachwuchsmitglied:
-        one: ""
-        description: ""
+        one: Membre de la relève
+        description: Membre de la relève
       group/paddle_level/anbieter:
-        one: ""
-        description: ""
+        one: Prestataire
+        description: Prestataire
       group/paddle_level/assessor:
-        one: ""
-        description: ""
+        one: Assesseur-e
+        description: Assesseur-e
       group/paddle_level/koordinator:
-        one: ""
-        description: ""
+        one: Coordinateur-trice
+        description: Coordinateur-trice
 
       group/swiss_canoe_vorstand/praesident:
-        one: ""
-        description: ""
+        one: Président-e
+        description: Président-e
       group/swiss_canoe_vorstand/finanzchef:
-        one: ""
-        description: ""
+        one: Directeur financier- Directrice financière
+        description: Directeur financier- Directrice financière
       group/swiss_canoe_vorstand/vorstandsmitglied:
-        one: ""
-        description: ""
+        one: Membre du conseil d'administration
+        description: Membre du conseil d'administration
 
       group/geschaeftsleitung/mitarbeitende:
-        one: ""
-        description: ""
+        one: Salarié-e
+        description: Salarié-e
 
       group/mitarbeitende/trainer:
-        one: ""
-        description: ""
+        one: Entraîneur
+        description: Entraîneur
       group/mitarbeitende/mitarbeitende:
-        one: ""
-        description: ""
+        one: Salarié-e
+        description: Salarié-e
       group/mitarbeitende/back_office:
-        one: ""
-        description: ""
+        one: Service administratif
+        description: Service administratif
 
       group/externe_kontakte/externer_kontakt:
-        one: ""
-        description: ""
+        one: Contact externe
+        description: Contact externe
       group/externe_kontakte/swiss_canoe_partner:
-        one: ""
-        description: ""
+        one: "Partenaire Swiss Canoe "
+        description: "Partenaire Swiss Canoe "
 
       group/fachkommission/chef:
-        one: ""
-        description: ""
+        one: Chef-fe
+        description: Chef-fe
       group/fachkommission/mitglied:
-        one: ""
-        description: ""
+        one: Adhérant
+        description: Adhérant
 
       group/kantonalverband_vorstand/praesident:
-        one: ""
-        description: ""
+        one: Président-e
+        description: Président-e
       group/kantonalverband_vorstand/vorstandsmitglied:
-        one: ""
-        description: ""
+        one: Membre du conseil d'administration
+        description: Membre du conseil d'administration
       group/kantonalverband_vorstand/finanzchef:
-        one: ""
-        description: ""
+        one: Directeur financier- Directrice financière
+        description: Directeur financier- Directrice financière
 
       group/sektion_vorstand/praesident:
-        one: ""
-        description: ""
+        one: Président-e
+        description: Président-e
       group/sektion_vorstand/kassier:
-        one: ""
-        description: ""
+        one: Trésorier- Trésorière
+        description: Trésorier- Trésorière
       group/sektion_vorstand/sekretaer:
-        one: ""
-        description: ""
+        one: Secrétaire
+        description: Secrétaire
       group/sektion_vorstand/vorstandsmitglied:
-        one: ""
-        description: ""
+        one: Membre du conseil d'administration
+        description: Membre du conseil d'administration
 
       group/sektion/js_coach:
-        one: ""
-        description: ""
+        one: Coach J+S
+        description: Coach J+S
       group/sektion/junior:
-        one: ""
-        description: ""
+        one: Junior
+        description: Junior
       group/sektion/aktivmitglied:
-        one: ""
-        description: ""
+        one: Membre actif
+        description: Membre actif
       group/sektion/passivmitglied:
-        one: ""
-        description: ""
+        one: Membre passif
+        description: Membre actif
       group/sektion/ehrenmitglied:
-        one: ""
-        description: ""
+        one: Membre honoraire
+        description: Membre honoraire
 
       group/projektgruppe/mitglied:
-        one: ""
-        description: ""
+        one: Adhérant
+        description: Adhérant
       group/projektgruppe/leitung:
-        one: ""
-        description: ""
+        one: Direction
+        description: Direction
 
       group/regionale_leistungszentren/leitung:
-        one: ""
-        description: ""
+        one: Direction
+        description: Direction
       group/regionale_leistungszentren/mitglied:
-        one: ""
-        description: ""
+        one: Adhérant
+        description: Adhérant
 
       group/nationalmannschaft/trainer:
-        one: ""
-        description: ""
+        one: Entraîneur
+        description: Entraîneur
       group/nationalmannschaft/kaderathlet:
-        one: ""
-        description: ""
+        one: Athlète en cadre
+        description: Athlète en cadre
 
       group/verein/leitung:
-        one: ""
+        one: Responsable
         description:
       group/verein/mitglied:
-        one: ""
-        description: ""
+        one: Adhérant
+        description: "Les membres, c'est tout le monde."
 
     attributes:
       qualification_kind:
-        paddle_pass_relevant: ""
+        paddle_pass_relevant: Paraît dans le Paddle Pass
       person:
-        membership_number: ""
+        membership_number: Numéro d'adhérent
 
