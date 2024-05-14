@@ -9,7 +9,8 @@ swiss_canoe:
   lft: 1
   rgt: 30
   email: alta.haley@example.org
-  address: Schellingstr. 8
+  street: Schellingstr.
+  housenumber: 8
   zip_code: 5692
   town: Damianburg
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
@@ -20,7 +21,8 @@ swiss_canoe_vorstand:
   lft: 2
   rgt: 3
   email: alta.haley@example.org
-  address: Schellingstr. 8
+  street: Schellingstr.
+  housenumber: 8
   zip_code: 5692
   town: Damianburg
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
@@ -38,7 +40,8 @@ geschaeftsleitung:
   lft: 6
   rgt: 7
   email: alta.haley@example.org
-  address: Schellingstr. 8
+  street: Schellingstr.
+  housenumber: 8
   zip_code: 5692
   town: Damianburg
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:swiss_canoe) %>
@@ -50,7 +53,8 @@ be:
   lft: 8
   rgt: 11
   email: bern@be.ch
-  address: Klostergasse 3
+  street: Klostergasse
+  housenumber: 3
   zip_code: 3333
   town: Bern
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be) %>
@@ -62,7 +66,8 @@ zh:
   lft: 24
   rgt: 29
   email: zuerich@zh.ch
-  address: Tellgasse 3
+  street: Tellgasse
+  housenumber: 3
   zip_code: 8888
   town: Zürich
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:zh) %>
@@ -73,7 +78,8 @@ be_kanu_club:
   lft: 9
   rgt: 10
   email: verner@example.com
-  address: Glücksburger Str. 50a
+  street: Glücksburger Str.
+  housenumber: 50a
   zip_code: 6809
   town: Wakanscheid
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:be_kanu_club) %>
