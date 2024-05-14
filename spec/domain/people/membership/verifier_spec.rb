@@ -7,7 +7,7 @@
 
 require 'spec_helper'
 
-describe People::MembershipVerifier do
+describe People::Membership::Verifier do
 
   let(:verifier) { described_class.new(person) }
   let(:person) { people(:berner_kanufahrer) }

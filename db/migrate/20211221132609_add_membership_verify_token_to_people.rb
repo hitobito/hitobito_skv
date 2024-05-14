@@ -8,7 +8,7 @@
 class AddMembershipVerifyTokenToPeople < ActiveRecord::Migration[6.1]
 
   def change
-    add_column :people, :membership_verify_token, :string, index: true
+    add_column :people, :membership_verify_token, :string, index: true, if_not_exists: true
   end
 
 end

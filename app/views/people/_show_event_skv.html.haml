@@ -7,7 +7,7 @@
   %h2.mt-3= t('.documents')
   %div
     %dl.dl-horizontal
-      - if People::MembershipVerifier.new(entry).member?
+      - if People::Membership::Verifier.new(entry).member?
         = labeled t('.membership') do
           = link_to t('.download'), membership_path(format: :pdf), target: :new
 

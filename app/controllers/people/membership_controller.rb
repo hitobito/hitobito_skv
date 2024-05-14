@@ -25,7 +25,7 @@ class People::MembershipController < ApplicationController
   end
 
   def member?
-    People::MembershipVerifier.new(person).member?
+    People::Membership::Verifier.new(person).member?
   end
 
   def person

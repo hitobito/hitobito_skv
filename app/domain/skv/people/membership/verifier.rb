@@ -5,11 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-class People::MembershipVerifier
-
-  def initialize(person)
-    @person = person
-  end
+module Skv::People::Membership::Verifier
+  extend ActiveSupport::Concern
 
   def member?
     @person.roles.any? do |r|
