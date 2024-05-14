@@ -25,6 +25,7 @@ module HitobitoSkv
       Group.include Skv::Group
       Person.include Skv::Person
       Qualification.include Skv::Qualification
+      People::Membership::Verifier.prepend Skv::People::Membership::Verifier
 
       # CONTROLLERS
       QualificationKindsController.permitted_attrs += [:paddle_pass_relevant]
