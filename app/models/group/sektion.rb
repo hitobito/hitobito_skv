@@ -23,9 +23,16 @@ class Group::Sektion < ::Group
 
   class Aktivmitglied < ::Role; end
 
+  class Anschlussmitglied < ::Role; end
+
   class Passivmitglied < ::Role; end
 
   class Ehrenmitglied < ::Role; end
 
-  roles JsCoach, Junior, Aktivmitglied, Passivmitglied, Ehrenmitglied
+  roles JsCoach,
+        Junior,
+        Aktivmitglied,
+        Anschlussmitglied,
+        Passivmitglied,
+        Ehrenmitglied
 end
