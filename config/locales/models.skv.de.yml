@@ -164,6 +164,9 @@ de:
       group/sektion/aktivmitglied:
         one: Aktivmitglied
         description: Aktivmitglied
+      group/sektion/anschlussmitglied:
+        one: Anschlussmitglied
+        description: Anschlussmitglied
       group/sektion/passivmitglied:
         one: Passivmitglied
         description: Passivmitglied
