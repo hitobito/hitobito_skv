@@ -180,6 +180,9 @@ fr:
       group/sektion/aktivmitglied:
         one: Membre actif
         description: Membre actif
+      group/sektion/anschlussmitglied:
+        one: ""
+        description: ""
       group/sektion/passivmitglied:
         one: Membre passif
         description: Membre actif
