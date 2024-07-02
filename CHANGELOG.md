@@ -1,6 +1,6 @@
 # Hitobito SKV Changelog
 
-## unreleased
+## Version 2.2
 
 - Rolle "Anschlussmitglied" in einer Sektion hinzugefügt (hitobito_skv#51)
 
