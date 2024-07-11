@@ -9,6 +9,6 @@ module Skv::Person
   extend ActiveSupport::Concern
 
   def membership_number
-    id.to_s.rjust(6, '0').scan(/.{1,3}/).join('-')
+    id.to_s.rjust(6, "0").scan(/.{1,3}/).join("-")
   end
 end

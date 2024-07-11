@@ -6,9 +6,8 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
-
-  LOGO_BOX_HEIGHT = 130.freeze
-  LOGO = 'swiss_canoe_passes.png'.freeze
+  LOGO_BOX_HEIGHT = 130
+  LOGO = "swiss_canoe_passes.png"
 
   def render
     render_logo
@@ -16,7 +15,7 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
 
   def render_logo(width: pdf.bounds.width, height: LOGO_BOX_HEIGHT)
     bounding_box([0, cursor], width: width, height: height) do
-      image(logo_path, { position: :left, at: [-40, height + 20] })
+      image(logo_path, {position: :left, at: [-40, height + 20]})
       skv_label
     end
   end
@@ -25,9 +24,9 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
     text_box("Schweizerischer Kanu-Verband\n" \
              "Fédération Suisse de Canoë-Kayak\n" \
              "Swiss Canoe Federation",
-             align: :center,
-             at: [120, 90],
-             size: 14.pt)
+      align: :center,
+      at: [120, 90],
+      size: 14.pt)
   end
 
   def logo_path
@@ -35,7 +34,6 @@ class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
   end
 
   def image_path(name)
-    Wagons.find_wagon(__FILE__).root.join('app', 'assets', 'images', name)
+    Wagons.find_wagon(__FILE__).root.join("app", "assets", "images", name)
   end
-
 end

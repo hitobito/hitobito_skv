@@ -5,8 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 module Skv::Group
   ::Group.root_types(::Group::SwissCanoe)
-
 end

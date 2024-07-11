@@ -6,22 +6,20 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class Export::Pdf::Passes::Membership
-
   class Person < Export::Pdf::Section
-
-    alias person model
+    alias_method :person, :model
 
     def render
       pdf.move_down(20)
       table_data = [[row_membership], [row_address_qr]]
-      table(table_data, cell_style: { border_width: 0 })
+      table(table_data, cell_style: {border_width: 0})
       text(valid_until, size: 16)
     end
 
     private
 
     def row_address_qr
-      data = [[person_address, { image: verify_qr_code }]]
+      data = [[person_address, {image: verify_qr_code}]]
       pdf.make_table(data) do
         cells.borders = []
         cells.size = 24
@@ -32,7 +30,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def row_membership
-      attrs = [[t('membership_number'), person.membership_number], [t('layer'), layer_name]]
+      attrs = [[t("membership_number"), person.membership_number], [t("layer"), layer_name]]
       pdf.make_table(attrs) do
         cells.borders = []
         cells.size = 16
@@ -62,6 +60,5 @@ class Export::Pdf::Passes::Membership
     def t(key)
       I18n.t("passes.membership.#{key}")
     end
-
   end
 end

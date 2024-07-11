@@ -12,7 +12,7 @@ class Export::Pdf::Passes::PaddlePass
     PERSON_INFO_BOX = [300, 120]
     PADDLE_LEVELS_BOX = [400, 300]
 
-    EPP_LOGO = 'epp_paddle_pass.png'.freeze
+    EPP_LOGO = "epp_paddle_pass.png"
 
     def render
       pdf.move_down 20
@@ -37,9 +37,9 @@ class Export::Pdf::Passes::PaddlePass
     end
 
     def skv_info
-      info = ['CH-8000 Zürich',
-              'Phone +41 43 222 40 77',
-              'info@swisscanoe.ch - www.swisscanoe.ch'].join("\n")
+      info = ["CH-8000 Zürich",
+        "Phone +41 43 222 40 77",
+        "info@swisscanoe.ch - www.swisscanoe.ch"].join("\n")
       text(info, align: :center)
     end
 
@@ -48,10 +48,10 @@ class Export::Pdf::Passes::PaddlePass
 
       bounding_box([0, cursor], width: width, height: height) do
         table([[t(:full_name), person.full_name],
-               [t(:membership_number), person.membership_number],
-               [t(:club), club_name]],
-              width: width,
-              cell_style: { borders: [] } )
+          [t(:membership_number), person.membership_number],
+          [t(:club), club_name]],
+          width: width,
+          cell_style: {borders: []})
       end
     end
 
@@ -61,25 +61,25 @@ class Export::Pdf::Passes::PaddlePass
       bounding_box([0, cursor], width: width, height: height) do
         if paddle_level_table_entries.present?
           table(paddle_level_table_entries,
-                width: width,
-                cell_style: { borders: [] })
+            width: width,
+            cell_style: {borders: []})
         end
       end
     end
 
     def epp_logo
-      image(image_path(EPP_LOGO), { position: :left, at: [20, 24] })
+      image(image_path(EPP_LOGO), {position: :left, at: [20, 24]})
     end
 
     def paddle_level_table_entries
-      @paddle_level_table_entries ||= fetch_paddle_level_table_entries    
+      @paddle_level_table_entries ||= fetch_paddle_level_table_entries
     end
 
     def fetch_paddle_level_table_entries
       person.qualifications.paddle_pass_relevant
         .select(&:active?)
         .each_with_index.map do |qualification, i|
-          [qualification.qualification_kind.to_s, qualification.start_at.strftime('%m/%Y')]
+        [qualification.qualification_kind.to_s, qualification.start_at.strftime("%m/%Y")]
       end
     end
 
@@ -93,7 +93,7 @@ class Export::Pdf::Passes::PaddlePass
     end
 
     def image_path(name)
-      Wagons.find_wagon(__FILE__).root.join('app', 'assets', 'images', name)
+      Wagons.find_wagon(__FILE__).root.join("app", "assets", "images", name)
     end
 
     def t(key)

@@ -6,14 +6,13 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class People::MembershipController < ApplicationController
-
   def show
     authorize!(:update, person)
     verify_membership!
 
     respond_to do |format|
       format.pdf do
-        send_data pdf.render, type: :pdf, disposition: 'inline', filename: pdf.filename
+        send_data pdf.render, type: :pdf, disposition: "inline", filename: pdf.filename
       end
     end
   end
@@ -35,5 +34,4 @@ class People::MembershipController < ApplicationController
   def pdf
     @pdf ||= Export::Pdf::Passes::Membership.new(person)
   end
-
 end

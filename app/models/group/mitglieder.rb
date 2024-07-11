@@ -11,6 +11,7 @@ class Group::Mitglieder < ::Group
   end
 
   class Ehrenmitglied < ::Role; end
+
   class Nachwuchsmitglied < ::Role; end
 
   roles Mitglied, Ehrenmitglied, Nachwuchsmitglied

@@ -5,10 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 class Group::Kantonalverband < ::Group
   self.layer = true
 
   children(Group::KantonalverbandVorstand,
-           Group::Sektion)
+    Group::Sektion)
 end

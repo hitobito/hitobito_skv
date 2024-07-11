@@ -5,8 +5,7 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
-require_relative 'paddle_pass/content'
+require_relative "paddle_pass/content"
 
 module Export::Pdf::Passes
   class PaddlePass
@@ -36,11 +35,10 @@ module Export::Pdf::Passes
       end
     end
 
-    
     def render_options
       @options.to_h.merge(
-        page_size: 'A4',
-        page_layout: :portrait,
+        page_size: "A4",
+        page_layout: :portrait
       )
     end
   end
