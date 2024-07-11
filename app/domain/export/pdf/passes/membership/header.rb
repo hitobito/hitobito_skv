@@ -7,7 +7,6 @@
 
 class Export::Pdf::Passes::Membership
   class Header < Export::Pdf::Section
-
     def render
       pdf.move_down(20)
       text(title, size: 30, style: :bold, align: :center)
@@ -18,15 +17,14 @@ class Export::Pdf::Passes::Membership
     private
 
     def title
-      "#{I18n.t('passes.membership.title')} #{Time.zone.today.year}"
+      "#{I18n.t("passes.membership.title")} #{Time.zone.today.year}"
     end
 
     def render_skv_info
-      info = ['CH-8000 Zürich',
-              'Phone +41 43 222 40 77',
-              'info@swisscanoe.ch - www.swisscanoe.ch'].join(' - ')
+      info = ["CH-8000 Zürich",
+        "Phone +41 43 222 40 77",
+        "info@swisscanoe.ch - www.swisscanoe.ch"].join(" - ")
       text(info, align: :center)
     end
-
   end
 end

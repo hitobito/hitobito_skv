@@ -9,6 +9,7 @@ class Group::ExterneKontakte < ::Group
   class ExternerKontakt < ::Role
     self.kind = :external
   end
+
   class SwissCanoePartner < ::Role
     self.kind = :external
   end

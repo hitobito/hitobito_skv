@@ -7,7 +7,6 @@
 
 class Export::Pdf::Passes::Membership
   class Footer < Export::Pdf::Section
-
     def render
       pdf.move_down(10)
       text(licence_info, size: 16)
@@ -21,16 +20,15 @@ class Export::Pdf::Passes::Membership
     end
 
     def sponsors_image_path
-      image_path('sponsors_membership_pass.png')
+      image_path("sponsors_membership_pass.png")
     end
 
     def image_path(name)
-      Wagons.find_wagon(__FILE__).root.join('app', 'assets', 'images', name)
+      Wagons.find_wagon(__FILE__).root.join("app", "assets", "images", name)
     end
 
     def t(key)
       I18n.t("passes.membership.#{key}")
     end
-
   end
 end

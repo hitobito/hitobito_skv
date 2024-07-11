@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 class Group::SektionVorstand < ::Group
   class Praesident < ::Role
     self.permissions = [:layer_and_below_full]

@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-
 class Group::Sektion < ::Group
   self.layer = true
   self.default_children = [
@@ -13,7 +12,7 @@ class Group::Sektion < ::Group
   ]
 
   children Group::Projektgruppe,
-           Group::SektionVorstand
+    Group::SektionVorstand
 
   class JsCoach < ::Role
     self.permissions = [:group_full]
@@ -30,9 +29,9 @@ class Group::Sektion < ::Group
   class Ehrenmitglied < ::Role; end
 
   roles JsCoach,
-        Junior,
-        Aktivmitglied,
-        Anschlussmitglied,
-        Passivmitglied,
-        Ehrenmitglied
+    Junior,
+    Aktivmitglied,
+    Anschlussmitglied,
+    Passivmitglied,
+    Ehrenmitglied
 end

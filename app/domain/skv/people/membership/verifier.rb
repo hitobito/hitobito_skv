@@ -13,5 +13,4 @@ module Skv::People::Membership::Verifier
       r.kind != :external
     end
   end
-
 end

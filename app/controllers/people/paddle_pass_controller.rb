@@ -6,7 +6,6 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 class People::PaddlePassController < ApplicationController
-
   def show
     authorize!(:update, person)
 
@@ -28,6 +27,6 @@ class People::PaddlePassController < ApplicationController
   end
 
   def pdf_filename
-    "skv-paddle-pass-#{person.full_name.parameterize(separator: '-')}.pdf"
+    "skv-paddle-pass-#{person.full_name.parameterize(separator: "-")}.pdf"
   end
 end
