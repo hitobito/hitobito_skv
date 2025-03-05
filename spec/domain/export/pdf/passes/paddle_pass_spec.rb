@@ -5,10 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-require 'spec_helper'
+require "spec_helper"
 
 describe Export::Pdf::Passes::PaddlePass do
-
   let(:member) { people(:berner_kanufahrer) }
   let(:analyzer) { PDF::Inspector::Text.analyze(subject.render) }
   let(:year) { Time.zone.now.year }
@@ -16,21 +15,20 @@ describe Export::Pdf::Passes::PaddlePass do
   subject { described_class.new(member) }
 
   before do
-    member.update!(address: 'Wasserstrasse 42', zip_code: '4242', town: 'Kanuto')
+    member.update!(street: "Wasserstrasse", housenumber: 42, zip_code: "4242", town: "Kanuto")
 
-    [{ label: 'Paddle Level 4 Whitewater Kayak', start_at: Date.new(2019, 3, 2) },
-     { label: 'Paddle Level 3 Seakayak', start_at: Date.new(year - 2, 6, 20) },
-     { label: 'Paddle Level 3 Touring', start_at: Date.new(2019, 7, 10) },
-     { label: 'Paddle Level 2 SUP', start_at: Date.new(year - 1, 10, 23) }].each do |attrs|
-       kind = Fabricate(:qualification_kind, label: attrs[:label], paddle_pass_relevant: true)
+    [{label: "Paddle Level 4 Whitewater Kayak", start_at: Date.new(2019, 3, 2)},
+      {label: "Paddle Level 3 Seakayak", start_at: Date.new(year - 2, 6, 20)},
+      {label: "Paddle Level 3 Touring", start_at: Date.new(2019, 7, 10)},
+      {label: "Paddle Level 2 SUP", start_at: Date.new(year - 1, 10, 23)}].each do |attrs|
+      kind = Fabricate(:qualification_kind, label: attrs[:label], paddle_pass_relevant: true)
 
-       Fabricate(:qualification, person: member, qualification_kind: kind, start_at: attrs[:start_at])
+      Fabricate(:qualification, person: member, qualification_kind: kind, start_at: attrs[:start_at])
     end
   end
 
-  context 'text' do
-
-    it 'renders paddle pass' do
+  context "text" do
+    it "renders paddle pass" do
       expect(text_with_position).to eq [
         [260, 756, "Schweizerischer Kanu-Verband"],
         [248, 740, "Fédération Suisse de Canoë-Kayak"],
@@ -60,5 +58,4 @@ describe Export::Pdf::Passes::PaddlePass do
       p.collect(&:round) + [analyzer.show_text[i]]
     end
   end
-
 end
