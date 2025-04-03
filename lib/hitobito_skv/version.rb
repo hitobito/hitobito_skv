@@ -6,5 +6,5 @@
 #  https://github.com/hitobito/hitobito_skv.
 
 module HitobitoSkv
-  VERSION = "2.5.0"
+  VERSION = "2.5.3"
 end
