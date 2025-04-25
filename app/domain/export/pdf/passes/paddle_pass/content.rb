@@ -85,6 +85,8 @@ class Export::Pdf::Passes::PaddlePass
 
     def club_name
       layer = group&.layer_group
+      return if layer.nil?
+
       layer.short_name || layer.name
     end
 
