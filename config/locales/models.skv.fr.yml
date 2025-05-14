@@ -1,96 +1,70 @@
-#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
-#  hitobito_skv and licensed under the Affero General Public License version 3
-#  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_skv.
-
 fr:
   activerecord:
     models:
-
-      ### GROUPS
-
       group/swiss_canoe:
         one: Fédération suisse de canoë-kayak
         many: Fédération suisse de canoë-kayak
         other: Fédération suisse de canoë-kayak
-
       group/swiss_canoe_vorstand:
         one: Comité
         many: Comités
         other: Comités
-
       group/mitglieder:
         one: Adhérent
         many: Adhérents
         other: Adhérents
-
       group/paddle_level:
         one: Paddle Level
         many: Paddle Level
         other: Paddle Level
-
       group/geschaeftsleitung:
         one: Direction
         many: Directions
         other: Directions
-
       group/mitarbeitende:
         one: Salarié
         many: Salariés
         other: Salariés
-
       group/externe_kontakte:
         one: Contact externe
         many: Contacts externes
         other: Contacts externes
-
       group/fachkommission:
         one: Commission technique
         many: Commissions techniques
         other: Commissions techniques
-
       group/kantonalverband:
         one: Association cantonale
         many: Associations cantonales
         other: Associations cantonales
-
       group/kantonalverband_vorstand:
         one: Comité directeur
         many: Comités directeurs
         other: Comités directeurs
-
       group/sektion:
         one: Section
         many: Sections
         other: Section
-
       group/sektion_vorstand:
         one: Comité directeur
         many: Comités directeurs
         other: Comités directeurs
-
       group/projektgruppe:
         one: Groupe de projet
         many: Groupes de projet
         other: Groupes de projet
-
       group/regionale_leistungszentren:
         one: Centre régional de performance
         many: Centres régionaux de performance
         other: Centres régionaux de performance
-
       group/nationalmannschaft:
         one: Équipe nationale
         many: Équipes nationales
         other: Équipes nationales
-
       group/verein:
         one: Association
         many: Associations
         other: Associations
-
-      ### ROLES
-
       group/mitglieder/mitglied:
         one: Adhérant
         description: Adhérant
@@ -109,7 +83,6 @@ fr:
       group/paddle_level/koordinator:
         one: Coordinateur-trice
         description: Coordinateur-trice
-
       group/swiss_canoe_vorstand/praesident:
         one: Président-e
         description: Président-e
@@ -119,11 +92,9 @@ fr:
       group/swiss_canoe_vorstand/vorstandsmitglied:
         one: Membre du conseil d'administration
         description: Membre du conseil d'administration
-
       group/geschaeftsleitung/mitarbeitende:
         one: Salarié-e
         description: Salarié-e
-
       group/mitarbeitende/trainer:
         one: Entraîneur
         description: Entraîneur
@@ -133,21 +104,18 @@ fr:
       group/mitarbeitende/back_office:
         one: Service administratif
         description: Service administratif
-
       group/externe_kontakte/externer_kontakt:
         one: Contact externe
         description: Contact externe
       group/externe_kontakte/swiss_canoe_partner:
-        one: "Partenaire Swiss Canoe "
-        description: "Partenaire Swiss Canoe "
-
+        one: 'Partenaire Swiss Canoe '
+        description: 'Partenaire Swiss Canoe '
       group/fachkommission/chef:
         one: Chef-fe
         description: Chef-fe
       group/fachkommission/mitglied:
         one: Adhérant
         description: Adhérant
-
       group/kantonalverband_vorstand/praesident:
         one: Président-e
         description: Président-e
@@ -157,7 +125,6 @@ fr:
       group/kantonalverband_vorstand/finanzchef:
         one: Directeur financier- Directrice financière
         description: Directeur financier- Directrice financière
-
       group/sektion_vorstand/praesident:
         one: Président-e
         description: Président-e
@@ -170,7 +137,6 @@ fr:
       group/sektion_vorstand/vorstandsmitglied:
         one: Membre du conseil d'administration
         description: Membre du conseil d'administration
-
       group/sektion/js_coach:
         one: Coach J+S
         description: Coach J+S
@@ -180,47 +146,37 @@ fr:
       group/sektion/aktivmitglied:
         one: Membre actif
         description: Membre actif
-      group/sektion/anschlussmitglied:
-        one: ""
-        description: ""
       group/sektion/passivmitglied:
         one: Membre passif
         description: Membre actif
       group/sektion/ehrenmitglied:
         one: Membre honoraire
         description: Membre honoraire
-
       group/projektgruppe/mitglied:
         one: Adhérant
         description: Adhérant
       group/projektgruppe/leitung:
         one: Direction
         description: Direction
-
       group/regionale_leistungszentren/leitung:
         one: Direction
         description: Direction
       group/regionale_leistungszentren/mitglied:
         one: Adhérant
         description: Adhérant
-
       group/nationalmannschaft/trainer:
         one: Entraîneur
         description: Entraîneur
       group/nationalmannschaft/kaderathlet:
         one: Athlète en cadre
         description: Athlète en cadre
-
       group/verein/leitung:
         one: Responsable
-        description:
       group/verein/mitglied:
         one: Adhérant
-        description: "Les membres, c'est tout le monde."
-
+        description: Les membres, c'est tout le monde.
     attributes:
       qualification_kind:
         paddle_pass_relevant: Paraît dans le Paddle Pass
       person:
         membership_number: Numéro d'adhérent
-
