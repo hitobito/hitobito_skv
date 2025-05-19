@@ -181,8 +181,8 @@ fr:
         one: Membre actif
         description: Membre actif
       group/sektion/anschlussmitglied:
-        one: ""
-        description: ""
+        one: Anschlussmitglied
+        description: Anschlussmitglied
       group/sektion/passivmitglied:
         one: Membre passif
         description: Membre actif
