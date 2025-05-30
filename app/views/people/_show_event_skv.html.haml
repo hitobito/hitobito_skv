@@ -9,7 +9,7 @@
     %dl.dl-horizontal
       - if People::Membership::Verifier.new(entry).member?
         = labeled t('.membership') do
-          = link_to t('.download'), membership_path(format: :pdf), target: :new
+          = link_to t('.download'), membership_path(format: :pdf), target: :_blank
 
       = labeled t('.paddle_pass') do
-        = link_to t('.download'), paddle_pass_path(format: :pdf), target: :new
+        = link_to t('.download'), paddle_pass_path(format: :pdf), target: :_blank
