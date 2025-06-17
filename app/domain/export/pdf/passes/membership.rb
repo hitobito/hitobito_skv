@@ -5,17 +5,19 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-require_relative "membership/header"
-require_relative "membership/person"
-require_relative "membership/footer"
-
 module Export::Pdf::Passes
   class Membership
+    # Explicitely use the default values of prawn for margin and font to keep the current layout after changing the code
+    # to use `Export::Pdf::Document` which sets those values to something else.
+    MARGIN = 0.5.in
+    FONT = "Helvetica"
+
     def initialize(person)
       @person = person
     end
 
     def render
+      pdf.font FONT
       sections.each do |section|
         section.render
       end
@@ -23,7 +25,7 @@ module Export::Pdf::Passes
     end
 
     def pdf
-      @pdf ||= Prawn::Document.new(render_options)
+      @pdf ||= Export::Pdf::Document.new(margin: MARGIN).pdf
     end
 
     def filename
@@ -34,13 +36,6 @@ module Export::Pdf::Passes
     end
 
     private
-
-    def render_options
-      @options.to_h.merge(
-        page_size: "A4",
-        page_layout: :portrait
-      )
-    end
 
     def sections
       @sections ||=
