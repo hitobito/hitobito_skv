@@ -34,19 +34,19 @@ describe Export::Pdf::Passes::PaddlePass do
         [248, 740, "Fédération Suisse de Canoë-Kayak"],
         [282, 723, "Swiss Canoe Federation"],
         [169, 634, "Paddle Level Card"],
-        [255, 612, "CH-8000 Zürich"],
-        [232, 598, "Phone +41 43 222 40 77"],
-        [185, 584, "info@swisscanoe.ch - www.swisscanoe.ch"],
-        [41, 539, "Vorname/Name"],
-        [310, 539, "Berner Kanufan"],
-        [41, 503, "Mitgliedernummer"],
-        [310, 503, "418-312-524"],
-        [41, 468, "Club/Organisation"],
-        [310, 468, "Kanu Club Bern"],
-        [41, 411, "Paddle Level 3 Seakayak"],
-        [340, 411, "06/#{year - 2}"],
-        [41, 384, "Paddle Level 2 SUP"],
-        [340, 384, "10/#{year - 1}"]
+        [266, 614, "CH-8000 Zürich"],
+        [248, 603, "Phone +41 43 222 40 77"],
+        [213, 593, "info@swisscanoe.ch - www.swisscanoe.ch"],
+        [41, 549, "Vorname/Name"],
+        [310, 549, "Berner Kanufan"],
+        [41, 514, "Mitgliedernummer"],
+        [310, 514, "418-312-524"],
+        [41, 478, "Club/Organisation"],
+        [310, 478, "Kanu Club Bern"],
+        [41, 422, "Paddle Level 3 Seakayak"],
+        [340, 422, "06/#{year - 2}"],
+        [41, 394, "Paddle Level 2 SUP"],
+        [340, 394, "10/#{year - 1}"]
       ]
     end
   end
