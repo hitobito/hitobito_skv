@@ -7,8 +7,9 @@
 
 module Export::Pdf::Passes
   class Membership
-    # Explicitely use the default values of prawn for margin and font to keep the current layout after changing the code
-    # to use `Export::Pdf::Document` which sets those values to something else.
+    # Explicitly use the default values of prawn for margin and font to keep the current layout
+    # after changing the code to use `Export::Pdf::Document` which sets those values to something
+    # else
     MARGIN = 0.5.in
     FONT = "Helvetica"
 
