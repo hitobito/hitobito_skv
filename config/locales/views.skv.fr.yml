@@ -1,0 +1,30 @@
+#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv.
+
+fr:
+  people:
+    show_event_skv:
+      documents: Dokumente
+      download: Anzeigen
+      membership: Mitgliederausweis
+      paddle_pass: Paddle Level Card
+  verify_membership:
+    title: Verifizierung SKV Mitgliedschaft
+    not_found: Ungültiger Verifikationscode
+    status_valid: Mitgliedschaft gültig
+    status_invalid: Keine gültige Mitgliedschaft
+  passes:
+    membership:
+      title: Mitgliederausweis
+      layer: Sektion
+      membership_number: Mitgliedernummer
+      valid_until: Gültig bis
+      licence_info: Gilt als Wettkampflizenz.
+      file_name_prefix: SKV-Mitgliederausweis
+    paddle_pass:
+      title: Paddle Level Card
+      full_name: Vorname/Name
+      membership_number: Mitgliedernummer
+      club: Club/Organisation
