@@ -34,3 +34,6 @@ assignments:
 groups:
   nextcloud:
     enabled: true
+
+passes:
+  legacy_verify_pass_definition_key: skv_membership

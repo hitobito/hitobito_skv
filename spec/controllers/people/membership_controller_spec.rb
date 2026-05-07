@@ -1,67 +1,54 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2021-2026, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_skv.
 
-require 'spec_helper'
+require "spec_helper"
 
 describe People::MembershipController do
+  let(:pass_definition) { pass_definitions(:skv_membership) }
 
-  let(:member) { people(:berner_kanufahrer) }
-  let(:be_vorstand) do
-    Fabricate('Group::KantonalverbandVorstand', parent: groups(:be))
+  let(:member) do
+    person = Fabricate(:person)
+    Fabricate(Group::Sektion::Aktivmitglied.sti_name.to_sym,
+      person: person,
+      group: groups(:be_kanu_club))
+    Fabricate(:pass, person: person, pass_definition: pass_definition)
+    person
   end
-  let(:vorstand) do
-    Fabricate('Group::KantonalverbandVorstand::Vorstandsmitglied',
-              group: be_vorstand).person
+
+  let(:other_person) do
+    Fabricate(:person)
   end
-  context 'GET show' do
-    it 'is possible to download own membership pass' do
+
+  context "GET show" do
+    it "redirects member to their pass show page" do
       sign_in(member)
+      pass = member.passes.first
 
-      get :show, params: { id: member.id, format: 'pdf' }
+      get :show, params: {id: member.id}
 
-      expect(response.status).to eq(200)
+      expect(response).to redirect_to(
+        group_person_pass_path(member.primary_group, member, pass)
+      )
     end
 
-    it 'is possible to download membership pass for writable person' do
-      sign_in(vorstand)
+    it "redirects to person page when no skv_membership pass exists" do
+      sign_in(other_person)
 
-      get :show, params: { id: member.id, format: 'pdf' }
+      get :show, params: {id: other_person.id}
 
-      expect(response.status).to eq(200)
+      expect(response).to redirect_to(person_path(other_person))
     end
 
-    it 'is not possible to download membership pass without access to person' do
-      sign_in(member)
+    it "raises AccessDenied when accessing another person without permission" do
+      sign_in(other_person)
 
       expect do
-        get :show, params: { id: vorstand.id, format: 'pdf' }
+        get :show, params: {id: member.id}
       end.to raise_error(CanCan::AccessDenied)
     end
-
-    context 'non member' do
-      let(:mitarbeiter) do
-        gl = Fabricate('Group::Geschaeftsleitung', name: 'GL', parent: Group.root)
-        Fabricate('Group::Geschaeftsleitung::Mitarbeitende', group: gl).person
-      end
-
-      let(:non_member) do
-        ext = Fabricate('Group::ExterneKontakte', name: 'Extern', parent: Group.root)
-        Fabricate('Group::ExterneKontakte::ExternerKontakt', group: ext).person
-      end
-
-      it 'is not possible to download membership pass' do
-        sign_in(mitarbeiter)
-
-        expect do
-          get :show, params: { id: non_member.id, format: 'pdf' }
-        end.to raise_error(ActionController::RoutingError, 'Not Found')
-      end
-    end
-
   end
-
 end

@@ -11,8 +11,7 @@ Rails.application.routes.draw do
 
   language_scope do
     # Define wagon routes here
-    
-    get '/people/:id/membership' => 'people/membership#show', as: 'membership'
+    get "/people/:id/membership", to: "people/membership#show", as: "membership"
     get '/people/:id/paddle_pass' => 'people/paddle_pass#show', as: 'paddle_pass'
   end
 

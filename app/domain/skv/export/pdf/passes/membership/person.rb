@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2021-2026, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_skv.
+#  https://github.com/hitobito/hitobito_skv
 
-class Export::Pdf::Passes::Membership
+class Skv::Export::Pdf::Passes::Membership
   class Person < Export::Pdf::Section
     alias_method :person, :model
 
@@ -17,6 +17,14 @@ class Export::Pdf::Passes::Membership
     end
 
     private
+
+    def pass
+      model
+    end
+
+    def person
+      pass.person
+    end
 
     def row_address_qr
       data = [[person_address, {image: verify_qr_code}]]
@@ -47,7 +55,7 @@ class Export::Pdf::Passes::Membership
     end
 
     def verify_qr_code
-      qr_code = People::Membership::VerificationQrCode.new(person).generate
+      qr_code = Passes::VerificationQrCode.new(pass).generate
       qr_code = qr_code.as_png(size: 220).to_s
       StringIO.new(qr_code)
     end

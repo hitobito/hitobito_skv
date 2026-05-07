@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2012-2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2021-2026, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_skv.
+#  https://github.com/hitobito/hitobito_skv
 
-class Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
+class Skv::Export::Pdf::Passes::Sections::Logo < Export::Pdf::Section
   LOGO_BOX_HEIGHT = 130
   LOGO = "swiss_canoe_passes.png"
 

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2021, Schweizerischer Kanu-Verband. This file is part of
+#  Copyright (c) 2021-2026, Schweizerischer Kanu-Verband. This file is part of
 #  hitobito_skv and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
-#  https://github.com/hitobito/hitobito_skv.
+#  https://github.com/hitobito/hitobito_skv
 
-module Export::Pdf::Passes
+module Skv::Export::Pdf::Passes
   class Membership
     # Explicitly use the default values of prawn for margin and font to keep the current layout
     # after changing the code to use `Export::Pdf::Document` which sets those values to something
@@ -13,8 +13,9 @@ module Export::Pdf::Passes
     MARGIN = 0.5.in
     FONT = "Helvetica"
 
-    def initialize(person)
-      @person = person
+    def initialize(pass)
+      @pass = pass
+      @person = pass.person
     end
 
     def render
@@ -40,8 +41,8 @@ module Export::Pdf::Passes
 
     def sections
       @sections ||=
-        [Export::Pdf::Passes::Sections::Logo, Header, Person, Footer].collect do |section|
-          section.new(pdf, @person, {})
+        [Skv::Export::Pdf::Passes::Sections::Logo, Membership::Header, Membership::Person, Membership::Footer].collect do |section|
+          section.new(pdf, @pass, {})
         end
     end
 
