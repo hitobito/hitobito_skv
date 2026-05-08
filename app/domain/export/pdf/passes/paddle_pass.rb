@@ -29,7 +29,7 @@ module Export::Pdf::Passes
     end
 
     def sections
-      @sections ||= [Sections::Logo, Content].collect do |section|
+      @sections ||= [Skv::Export::Pdf::Passes::Sections::Logo, Content].collect do |section|
         section.new(pdf, @person, @options)
       end
     end
