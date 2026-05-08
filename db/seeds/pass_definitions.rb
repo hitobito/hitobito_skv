@@ -7,7 +7,9 @@
 
 skv_group = Group::SwissCanoe.first!
 
-PassDefinition.find_or_create_by!(owner: skv_group, template_key: "skv_membership") do |pd|
+PassDefinition.find_or_create_by!(id: 1) do |pd|
+  pd.owner = skv_group
+  pd.template_key = "skv_membership"
   pd.name = "Mitgliederausweis"
   pd.description = "Mitgliederausweis des Schweizerischen Kanu-Verbands"
 
