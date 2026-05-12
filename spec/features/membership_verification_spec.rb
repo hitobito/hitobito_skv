@@ -17,7 +17,7 @@ describe Passes::VerificationsController do
 
   it "shows invalid token information" do
     visit "/passes/verify/nOnExistentTOOKen"
-    expect(page).to have_text "Pass ist ungültig"
+    expect(page).to have_text "Dieser Pass konnte nicht verifiziert werden"
   end
 
   context "with valid token" do
