@@ -7,8 +7,6 @@
 
 class Skv::Export::Pdf::Passes::Membership
   class Person < Export::Pdf::Section
-    alias_method :person, :model
-
     def render
       pdf.move_down(20)
       table_data = [[row_membership], [row_address_qr]]

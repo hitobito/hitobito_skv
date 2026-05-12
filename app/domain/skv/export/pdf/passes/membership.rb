@@ -41,7 +41,8 @@ module Skv::Export::Pdf::Passes
 
     def sections
       @sections ||=
-        [Skv::Export::Pdf::Passes::Sections::Logo, Membership::Header, Membership::Person, Membership::Footer].collect do |section|
+        [Skv::Export::Pdf::Passes::Sections::Logo, Membership::Header, Membership::Person,
+          Membership::Footer].collect do |section|
           section.new(pdf, @pass, {})
         end
     end
