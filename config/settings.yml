@@ -36,4 +36,4 @@ groups:
     enabled: true
 
 passes:
-  legacy_verify_pass_definition_key: skv_membership
+  membership_pass_definition_id: 1

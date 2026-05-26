@@ -6,8 +6,9 @@
 #  https://github.com/hitobito/hitobito_skv
 
 skv_group = Group::SwissCanoe.first!
+id = Settings.passes.membership_pass_definition_id
 
-PassDefinition.find_or_create_by!(id: 1) do |pd|
+PassDefinition.find_or_create_by!(id:) do |pd|
   pd.owner = skv_group
   pd.template_key = "skv_membership"
   pd.name = "Mitgliederausweis"
