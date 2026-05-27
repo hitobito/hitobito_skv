@@ -9,10 +9,9 @@ class People::MembershipController < ApplicationController
   def show
     authorize!(:show, person)
     pass = person.passes.joins(:pass_definition)
-      .find_by(pass_definitions: {template_key: Settings.passes.legacy_verify_pass_definition_key})
-
+      .find_by(pass_definitions: {id: Settings.passes.membership_pass_definition_id})
     if pass
-      redirect_to group_person_pass_path(person.primary_group, person, pass)
+      redirect_to group_person_pass_path(person.primary_group, person, pass, format: :pdf)
     else
       redirect_to person_path(person)
     end
