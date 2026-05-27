@@ -11,7 +11,7 @@ class People::MembershipController < ApplicationController
     pass = person.passes.joins(:pass_definition)
       .find_by(pass_definitions: {id: Settings.passes.membership_pass_definition_id})
     if pass
-      redirect_to group_person_pass_path(person.primary_group, person, pass, format: :pdf)
+      redirect_to group_person_pass_path(person.default_group_id, person, pass, format: :pdf)
     else
       redirect_to person_path(person)
     end

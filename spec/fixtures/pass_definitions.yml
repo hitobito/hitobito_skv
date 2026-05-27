@@ -4,6 +4,7 @@
 #  https://github.com/hitobito/hitobito_skv
 
 skv_membership:
+  id: 1
   owner: swiss_canoe (Group)
   template_key: skv_membership
   background_color: "#ffffff"

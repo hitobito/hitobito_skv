@@ -31,7 +31,7 @@ describe People::MembershipController do
       get :show, params: {id: member.id}
 
       expect(response).to redirect_to(
-        group_person_pass_path(member.primary_group, member, pass)
+        group_person_pass_path(member.primary_group, member, pass, format: :pdf)
       )
     end
 
