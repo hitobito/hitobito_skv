@@ -1,0 +1,20 @@
+#  Copyright (c) 2026, Schweizerischer Kanu-Verband. This file is part of
+#  hitobito_skv and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_skv
+
+skv_membership_de:
+  pass_definition_id: <%= ActiveRecord::FixtureSet.identify(:skv_membership) %>
+  locale: de
+  name: SKV Mitgliederausweis
+  description: Mitgliederausweis des Schweizerischen Kanu-Verbands
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
+
+skv_membership_fr:
+  pass_definition_id: <%= ActiveRecord::FixtureSet.identify(:skv_membership) %>
+  locale: fr
+  name: Carte de membre SKV
+  description: Carte de membre de la Fédération Suisse de Canoë-Kayak
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

@@ -34,3 +34,6 @@ assignments:
 groups:
   nextcloud:
     enabled: true
+
+passes:
+  membership_pass_definition_id: 1

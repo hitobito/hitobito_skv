@@ -19,6 +19,13 @@ if root.address.blank?
   end
 end
 
+Group::Geschaeftsleitung.seed(:name, :parent_id,
+ {
+  name: "Geschäftsleitung",
+  parent_id: root.id
+ }
+)
+
 kantonalverbaende = Group::Kantonalverband.seed(:name, :parent_id,
   {
     name: "Bern",

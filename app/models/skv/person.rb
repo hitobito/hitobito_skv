@@ -11,4 +11,8 @@ module Skv::Person
   def membership_number
     id.to_s.rjust(6, "0").scan(/.{1,3}/).join("-")
   end
+
+  def member?
+    passes.where(pass_definition: PassDefinition.find_by(id: 1), state: :eligible).exists?
+  end
 end
