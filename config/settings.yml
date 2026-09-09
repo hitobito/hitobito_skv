@@ -37,3 +37,7 @@ groups:
 
 passes:
   membership_pass_definition_id: 1
+
+people:
+  people_managers:
+    enabled: true
